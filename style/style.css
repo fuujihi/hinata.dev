@@ -67,6 +67,8 @@
   text-align: center;
   float: left;
   margin-top: 1vw;
+  display: box;
+  box-align: center;
 }
  
 #nav li a {
@@ -74,6 +76,7 @@
   color: #fff;
   font-family: 'FOT-TsukuARdGothic Std R',sans-serif;
   font-size: 2vw;
+  display: block;
 }
 
 #nav li a:hover .hover{
@@ -104,6 +107,7 @@
 .about p {
   font-size: 3vw;
   margin-left: 10vw;
+  margin-top: 4vw;
 }
 
 .about span {
@@ -120,6 +124,7 @@
 
 .about .item p {
   margin-left: 0;
+  margin-top: auto;
 }
 
 @media screen and (max-width:991px) { 
@@ -139,12 +144,21 @@
     display: block;
     margin:auto;
   }
+  
+  .about div span {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .about div {
+    text-align: center;
+  }
 }
 
 .skill {
   font-size: 2.5vw;
   margin-left: 12vw;
-  margin-top: 5vw;
+  margin-top: 7vw;
 }
 
 .skills {

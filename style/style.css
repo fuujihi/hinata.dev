@@ -31,7 +31,7 @@
 
 .top .rectangle :first-child {
   margin-left: 3vw;
-  font-family: 'FOT-TsukuARdGothic Std B',sans-serif;
+  font-family: 'FOT-TsukuARdGothic Std B', 'ヒラギノ丸ゴ ProN', sans-serif;
   font-size: 4.5vw;
   vertical-align: baseline;
 

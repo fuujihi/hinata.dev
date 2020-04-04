@@ -233,3 +233,31 @@
   text-align: center;
   display: inline-block;
 }
+
+.career {
+  font-size: 1.8vw;
+}
+
+.career div div {
+  width: 5vw;
+  text-align: center;
+  display: inline-block;
+  margin-left: 13vw;
+}
+
+.career div span {
+  margin-top: auto;
+}
+
+.career div div i {
+  font-size: 3vw;
+  margin-right: 1vw;
+}
+
+.career a {
+  color: rgba(49, 192, 212, 0.94);
+}
+
+.career a i {
+  font-size: 1.5vw;
+}

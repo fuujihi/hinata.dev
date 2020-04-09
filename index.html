@@ -5,7 +5,6 @@
     <script src="https://kit.fontawesome.com/4ac04167ba.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css" style="text/css">
@@ -44,19 +43,19 @@
       <nav>
         <ul id="nav">
           <li>
-            <a href="#">
+            <a href="#about">
               <span class="hover"><i class="fas fa-kiwi-bird"></i></span>
               <span>about</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#works">
               <span class="hover"><i class="fas fa-crow"></i></span>
               <span>works</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#contact">
               <span class="hover"><i class="fas fa-dove"></i></span>
               <span>contact</span>
             </a>
@@ -64,7 +63,7 @@
         </ul>
       </nav>
       
-      <div class="about">
+      <div id="about" class="mb-5">
         <p>about...</p>
         <div class="row mt-5">
           <div class="item col-lg">
@@ -179,7 +178,7 @@
             <span class="summary">開発に困らない程度に使える。</span>
           </div>
 
-          <div class="item skills mb-3">
+          <div class="item skills mb-2">
             <div class="lang"><i class="fas fa-robot fab"></i></div>
             <span class="star">
               <i class="fas fa-star"></i>
@@ -192,7 +191,7 @@
           </div>
         </div>
         
-        <p class="mb-3">career</p>
+        <p class="mb-3 skill">career</p>
           <div class="career row">
             <div class="mb-3">
               <div><i class="fas fa-graduation-cap"></i></div>
@@ -215,6 +214,25 @@
           </div>
       </div>
       
+      <div id="works">
+        <p>works</p>
+        <p class="commingsoon">comming soon...</p>
+      </div>
+      
+      <div id="contact">
+        <p>contact</p>
+        <div>
+          <a href="mailto:fjhr0906&#64;gmail.com">
+            <div class="logo"><i class="far fa-paper-plane"></i></div>&ensp;<span>fjhr0906@gmail.com</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/hinatao3o">
+            <div class="logo"><i class="fab fa-facebook-f"></i></div>&ensp;<span>https://www.facebook.com/hinatao3o</span>
+          </a>
+        </div>
+      </div>
+      
       <div id="page_top"><a href="#"><i class="fas fa-feather-alt"></i></a></div>
     </div>
     
@@ -223,6 +241,7 @@
 
 
 <script type="text/javascript">
+  // ページトップ
   jQuery( function() {
     var $offset = jQuery( '#nav' ).offset(),
         navHeight = jQuery( '#nav' ).outerHeight();
@@ -242,9 +261,19 @@
       }
     } );
   } );
-
   $('#page_top').click(function () {
       $('body, html').animate({ scrollTop: 0 }, 500);
       return false;
+  });
+  
+  // ヘッダースムーススクロール
+  $(function() {
+     $('a[href^="#"]').click(function(){
+      var href = $(this).attr('href');
+      var target = $(href == '#' || href === '' ? 'html' : href);
+      var position = target.offset().top-100;
+      console.log(position);
+      $('html,body').animate({scrollTop : position}, 500);
+    });
   });
 </script>

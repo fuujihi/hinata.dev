@@ -146,23 +146,22 @@
 
 #page_top {
   font-size: 2vw;
-  color: #707070;
   position: fixed;
   right: -50px;
   bottom: 50px;
 }
 
-.about p {
-  font-size: 3vw;
+#about p {
+  font-size: 3.5vw;
   margin-left: 10vw;
-  margin-top: 4vw;
+  margin-top: 3.5vw;
 }
 
-.about span {
+#about span {
   font-size: 1.6vw;
 }
 
-.about div img {
+#about div img {
   -webkit-border-radius: 1.5vw;
   width: 30vw;
   display: block;
@@ -170,47 +169,47 @@
   z-index: 1;
 }
 
-.about .item p {
+#about .item p {
   margin-left: 0;
   margin-top: auto;
 }
 
 @media screen and (max-width:991px) { 
   
-  .about p {
+  #about p {
     font-size: 6vw;
     margin-left: 10vw;
   }
   
-  .about span {
+  #about span {
     font-size: 2.5vw;
   }
   
-  .about div img {
+  #about div img {
     -webkit-border-radius: 1.5vw;
     width: 50vw;
     display: block;
     margin:auto;
   }
   
-  .about div span {
+  #about div span {
     display: inline-block;
     text-align: left;
   }
   
-  .about div {
+  #about div {
     text-align: center;
   }
 }
 
 .skill {
-  font-size: 2.5vw;
-  margin-left: 12vw;
+  font-size: 2.5vw !important;
+  margin-left: 11vw !important;
   margin-top: 7vw;
 }
 
 .skills {
-  margin-left: 13vw;
+  margin-left: 14vw;
   font-size: 2vw;
 }
 
@@ -228,7 +227,7 @@
   vertical-align: middle;
 }
 
-.lang {
+.lang, .logo {
   width: 5vw;
   text-align: center;
   display: inline-block;
@@ -242,7 +241,7 @@
   width: 5vw;
   text-align: center;
   display: inline-block;
-  margin-left: 13vw;
+  margin-left: 14vw;
 }
 
 .career div span {
@@ -260,4 +259,43 @@
 
 .career a i {
   font-size: 1.5vw;
+}
+
+#works {
+  font-size: 3.5vw;
+  margin-top: 4vw;  
+  margin-left: 10vw;
+}
+
+.commingsoon {
+  font-size: 3vw;
+  margin-left: 20vw;
+}
+
+#contact {
+  font-size: 3.5vw;
+  margin-top: 4vw;  
+  margin-left: 10vw;
+  margin-bottom: 5vw;
+}
+
+#contact div {
+  font-size: 3vw;
+  margin-left: 4vw;
+}
+
+#contact div div {
+  display: inline-block;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+#contact div div:hover {
+  color: red;
+}
+
+#contact a:hover {
+  color:#FF0099;
 }

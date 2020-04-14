@@ -151,6 +151,15 @@
   bottom: 50px;
 }
 
+.align-center {
+  text-align: center;
+}
+
+.items {
+  text-align: left;
+  display: inline-block;
+}
+
 #about p {
   font-size: 3.5vw;
   margin-left: 10vw;
@@ -209,7 +218,7 @@
 }
 
 .skills {
-  margin-left: 14vw;
+  /* margin-left: 14vw; */
   font-size: 2vw;
 }
 
@@ -241,7 +250,6 @@
   width: 5vw;
   text-align: center;
   display: inline-block;
-  margin-left: 14vw;
 }
 
 .career div span {
@@ -263,20 +271,20 @@
 
 #works {
   font-size: 3.5vw;
-  margin-top: 4vw;  
-  margin-left: 10vw;
+  margin: 4vw 10vw 0 10vw;
+
 }
 
 .commingsoon {
   font-size: 3vw;
-  margin-left: 20vw;
+  text-align: center;
+  margin-left: 0 !important;
 }
 
 #contact {
   font-size: 3.5vw;
-  margin-top: 4vw;  
-  margin-left: 10vw;
-  margin-bottom: 5vw;
+  margin: 4vw 10vw 5vw 10vw;
+
 }
 
 #contact div {

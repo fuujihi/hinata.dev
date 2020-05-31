@@ -51,13 +51,6 @@
   #page_top {
     font-size: 4vw;
   }
-
-  /* 鳥さんアニメーション */
-  @keyframes yureru {
-    0% {transform: rotateZ(0deg);}
-    50% {transform: rotateZ(20deg);}
-    100% {transform: rotateZ(0deg);}
-  }
   
   /*---------------------------------
 

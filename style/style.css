@@ -165,8 +165,7 @@
 
 .title {
   font-size: 3.5vw;
-  margin-left: 10vw;
-  margin-top: 3.5vw;
+  margin: 0 0 2vw 10vw;
 }
 
 .name {
@@ -251,7 +250,8 @@
 .sub-title {
   font-size: 2.5vw;
   margin-left: 11vw;
-  margin-top: 5vw;
+  margin-top: 4vw;
+  margin-bottom: 0;
 }
 
 .skills {
@@ -307,7 +307,7 @@
 
 #works {
   font-size: 3.5vw;
-  margin: 4vw 10vw 0 0;
+  margin: 7vw 0 10vw 0;
 
 }
 
@@ -319,6 +319,7 @@
 
 #contact {
   font-size: 3.5vw;
+  margin-top: 7vw;
 }
 
 #contact .align-center {

@@ -105,12 +105,12 @@ h2 {
   font-size: 2vw;
 }
 
-#nav li a:hover i{
+#nav li a:hover span i {
   display: inline-block;
   animation: yureru .7s infinite;
 }
 
-#nav li a span i {
+#nav li a span {
   display: inline-block;
 }
 

@@ -319,23 +319,17 @@
 
 #contact {
   font-size: 3.5vw;
-  /* margin: 4vw 10vw 5vw 0; */
-
 }
 
 #contact .align-center {
   margin: auto;
-  width: 60vw;
+  width: 65vw;
 }
 
 #contact div {
   font-size: 3vw;
   text-align: left;
   margin-bottom: 1vw;
-}
-
-#contact div div {
-  /* display: inline-block; */
 }
 
 #contact a {

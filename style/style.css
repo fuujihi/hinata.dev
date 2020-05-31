@@ -194,7 +194,7 @@
   
   .title {
     font-size: 6vw;
-    margin-left: 10vw;
+    margin-left: 5vw;
   }
   
   #about span {
@@ -226,11 +226,12 @@
   }
   
   #about .align-center {
-    margin-left: 16vw;
+    margin-left: 8vw;
   }
   
-  .sub_title {
+  .sub-title {
     font-size: 4vw !important;
+    margin-left: 6vw !important;
   }
   
   .items {
@@ -247,9 +248,9 @@
   }
 }
 
-.sub_title {
+.sub-title {
   font-size: 2.5vw;
-  margin-left: 11vw !important;
+  margin-left: 11vw;
   margin-top: 5vw;
 }
 
@@ -318,19 +319,23 @@
 
 #contact {
   font-size: 3.5vw;
-  margin: 4vw 10vw 5vw 0;
+  /* margin: 4vw 10vw 5vw 0; */
 
+}
+
+#contact .align-center {
+  margin: auto;
+  width: 60vw;
 }
 
 #contact div {
   font-size: 3vw;
-  margin-left: 8vw;
   text-align: left;
   margin-bottom: 1vw;
 }
 
 #contact div div {
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 #contact a {

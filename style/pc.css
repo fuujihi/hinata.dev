@@ -103,10 +103,9 @@ h2 {
   color: #fff;
   font-family: 'FOT-TsukuARdGothic Std R',sans-serif;
   font-size: 2vw;
-  display: block;
 }
 
-#nav li a:hover .hover{
+#nav li a:hover i{
   display: inline-block;
   animation: yureru .7s infinite;
 }
@@ -124,9 +123,9 @@ h2 {
 
 /* 鳥さんアニメーション */
 @keyframes yureru {
-  0% {transform: rotateZ(0deg);}
-  50% {transform: rotateZ(20deg);}
-  100% {transform: rotateZ(0deg);}
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(20deg);}
+  100% {transform: rotate(0deg);}
 }
 
 /*---------------------------------

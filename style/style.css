@@ -41,29 +41,6 @@
   font-size: 3vw;
   color: #605F5F;
   vertical-align: baseline;
-
-}
-
-@media screen and (max-width:991px) { 
-  .top img {
-    height: 100vw;
-  }
-  
-  .top .rectangle {
-    width: 85%;
-    height: 15% !important;
-    top: 60vw;
-    line-height: 16vw;
-  }
-  
-  .top .rectangle :first-child {
-    font-size: 6.5vw;
-  }
-  
-  .top .rectangle span {
-    font-size: 3.5vw;
-  }
-  
 }
 
 #nav {
@@ -172,10 +149,6 @@
   font-size: 3.5vw;
 }
 
-#about span {
-  font-size: 1.6vw;
-}
-
 #about div img {
   -webkit-border-radius: 1.5vw;
   width: 30vw;
@@ -189,6 +162,14 @@
   margin-top: auto;
 }
 
+.name-jp {
+  font-size: 2vw;
+}
+
+.profile div {
+  font-size: 1.6vw;
+}
+
 @media screen and (max-width:991px) {
   
   .title {
@@ -196,8 +177,12 @@
     margin-left: 5vw;
   }
   
-  #about span {
-    font-size: 3vw;
+  .name {
+    font-size: 4vw;
+  }
+  
+  .name-jp {
+    font-size: 2vw;
   }
   
   #about div img {
@@ -211,6 +196,10 @@
     text-align: left;
   }
   
+  #about .align-center span {
+    font-size: 3vw !important;
+  }
+  
   .summary {
     margin-top: 1vw 0 2vw 0;
     display: block;
@@ -222,6 +211,10 @@
   
   #about div .profile {
     text-align: center;
+  }
+  
+  .profile div {
+    font-size: 2.5vw;
   }
   
   #about .align-center {
@@ -343,4 +336,26 @@
 
 #contact a:hover {
   color:#FF0099;
+}
+
+@media screen and (max-width:991px) {
+  .top img {
+    height: 100vw;
+  }
+  
+  .top .rectangle {
+    width: 85%;
+    height: 15% !important;
+    top: 60vw;
+    line-height: 16vw;
+  }
+  
+  .top .rectangle :first-child {
+    font-size: 6.5vw;
+  }
+  
+  .top .rectangle span {
+    font-size: 3.5vw;
+  }
+  
 }

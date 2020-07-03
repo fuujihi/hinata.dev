@@ -120,5 +120,23 @@
   #tooltip {
     display: none;
   }
+  
+  /*---------------------------------
+
+  works
+
+  ---------------------------------*/
+  
+  .card-title {
+    font-size: 3vw;
+  }
+  
+  .modal-body tr {
+    font-size: 3vw;
+  }
+  
+  .modal-body span {
+    font-size: 3vw;
+  }
 
 }

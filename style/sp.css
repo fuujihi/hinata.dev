@@ -130,5 +130,9 @@
   .card-title {
     font-size: 3vw;
   }
+  
+  .modal-body tr {
+    font-size: 3vw;
+  }
 
 }

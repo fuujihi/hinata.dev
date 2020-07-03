@@ -36,6 +36,10 @@ h2 {
   margin-bottom: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*---------------------------------
 
 トップ画像
@@ -99,7 +103,6 @@ h2 {
 }
  
 #nav li a {
-  text-decoration: none;
   color: #fff;
   font-family: 'FOT-TsukuARdGothic Std R',sans-serif;
   font-size: 2vw;
@@ -261,13 +264,37 @@ works
 #works {
   font-size: 3.5vw;
   margin: 7vw 0 10vw 0;
-
 }
 
-.commingsoon {
-  font-size: 3vw;
-  text-align: center;
-  margin-left: 0 !important;
+#works a {
+  text-decoration: none;
+}
+
+#works > div {
+  margin: 0 12vw 0 12vw;
+}
+
+.card {
+  width: auto;
+  margin-top: 2vw;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.card-body {
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.card-title {
+  font-size: 1.8vw;
+  margin-bottom: 0;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 0 0 #d7d3d3;
 }
 
 /*---------------------------------
@@ -289,10 +316,6 @@ contact
   font-size: 3vw;
   text-align: left;
   margin-bottom: 1vw;
-}
-
-#contact a {
-  text-decoration: none;
 }
 
 .mail, .facebook {

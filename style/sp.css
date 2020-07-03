@@ -116,5 +116,9 @@
     margin-top: 1vw 0 2vw 0;
     display: block;
   }
+  
+  #tooltip {
+    display: none;
+  }
 
 }

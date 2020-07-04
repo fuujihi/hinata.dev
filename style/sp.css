@@ -1,4 +1,4 @@
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   /*---------------------------------
 
   全体
@@ -10,8 +10,13 @@
   }
   
   h2 {
-    font-size: 4vw !important;
+    font-size: 5vw !important;
     margin-left: 6vw !important;
+  }
+  
+  .col-sm-12 {
+    flex: 0 0 100%!important;
+    max-width: 100%!important;
   }
   
   /*---------------------------------
@@ -32,7 +37,7 @@
   }
   
   #page_top {
-    font-size: 4vw;
+    font-size: 5vw;
   }
   
   /*---------------------------------
@@ -64,7 +69,7 @@
   about
 
   ---------------------------------*/
-  #about div img {
+  #about .profile-img {
     -webkit-border-radius: 1.5vw;
     width: 50vw;
     display: block;
@@ -76,7 +81,7 @@
   }
   
   #about .align-center span {
-    font-size: 3vw !important;
+    font-size: 3vw;
   }
   
   #about div .item {
@@ -88,15 +93,45 @@
   }
   
   .profile div {
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
   
   .name {
-    font-size: 4vw;
+    font-size: 5vw!important;
   }
   
   .name-jp {
-    font-size: 2vw;
+    font-size: 3vw;
+  }
+  
+  .sns {
+    font-size: 6vw!important;
+  }
+
+  .qiita-logo {
+    height: 6vw;
+  }
+  
+  .skills .lang i {
+    font-size: 4.5vw;
+  }
+  
+  .lang {
+    width: 7vw;
+  }
+  
+  .skills {
+    font-size: 5vw;
+  }
+  
+  .star {
+    font-size: 4.5vw;
+  }
+  
+  .summary {
+    font-size: 4vw!important;
+    margin-top: 1vw 0 2vw 0;
+    display: block;
   }
   
   #about .align-center {
@@ -112,12 +147,28 @@
     font-size: 2.5vw;
   }
   
-  .summary {
-    margin-top: 1vw 0 2vw 0;
-    display: block;
+  .career div div i {
+    font-size: 4.5vw!important;
   }
   
-  #tooltip {
+  .period {
+    font-size: 3.5vw!important;
+    margin-left: 3vw;
+  }
+  
+  .career .summary {
+    margin-left: 8vw; 
+  }
+  
+  .career .summary a, span {
+    font-size: 4vw!important;
+  }
+  
+  .career .summary i {
+    font-size: 3vw;
+  }
+  
+  .tooltip {
     display: none;
   }
   
@@ -137,6 +188,32 @@
   
   .modal-body span {
     font-size: 3vw;
+  }
+  
+  /*---------------------------------
+
+  contact
+
+  ---------------------------------*/
+  
+  #contact {
+    margin-bottom: 15vw!important;
+  }
+  
+  #contact i, span {
+    font-size: 4.8vw!important;
+  }
+  
+  #contact .align-center {
+    margin-top: 2vh;
+  }
+  
+  .facebook {
+    display: none;
+  }
+  
+  .facebook-sp {
+    display: inline;
   }
 
 }

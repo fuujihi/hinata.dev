@@ -136,7 +136,7 @@ a {
 about
 
 ---------------------------------*/
-#about div img {
+#about .profile-img {
   -webkit-border-radius: 1.5vw;
   width: 30vw;
   display: block;
@@ -156,11 +156,19 @@ about
   font-size: 1.6vw;
 }
 
+.sns {
+  font-size: 3vw;
+}
+
+.qiita-logo {
+  height: 3vw;
+}
+
 .skills {
   font-size: 2vw;
 }
 
-.skills .fab {
+.skills .lang i {
   font-size: 3vw;
   margin-right: 1vw;
 }
@@ -207,10 +215,10 @@ about
   font-size: 1.5vw;
 }
 
-#tooltip {
+.tooltip {
   position:relative;
 }
-#tooltip span {
+.tooltip span {
   min-width: 35vw;
   width: 100%;
   white-space: nowrap;
@@ -237,14 +245,14 @@ about
   -o-transition: all 0.5s ease-in-out; 
   transition: all 0.5s ease-in-out;
 }
-#tooltip span:after {
+.tooltip span:after {
   display: block;
   position: absolute;
   text-align: center;
   width: 100%;
 }
 
-#tooltip:hover > span {
+.tooltip:hover > span {
   visibility: visible;
   opacity: 1;
   top: -7.5vh;
@@ -350,15 +358,25 @@ contact
   margin-bottom: 1vw;
 }
 
+#contact .logo {
+  text-align: center;
+}
+
 .mail, .facebook {
   transition: 0.5s;
 }
 .mail:hover {
-  transition: 0.5s;
-  color: rgb(255, 85, 85);
+  color: #DD5144;
 }
 
 .facebook:hover {
-  transition: 0.5s;
-  color: rgb(91, 91, 255);
+  color: #3B5998;
+}
+
+.align-center div a {
+  text-decoration: none;
+}
+
+.facebook-sp {
+  display: none;
 }

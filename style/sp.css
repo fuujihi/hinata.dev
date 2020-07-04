@@ -160,7 +160,7 @@
     margin-left: 8vw; 
   }
   
-  .career .summary a, span {
+  .career .summary a, .career .summary span {
     font-size: 4vw!important;
   }
   
@@ -194,12 +194,20 @@
     font-size: 2.5vw!important;
   }
   
+  .modal-title {
+    font-size: 3.5vw;
+  }
+  
+  .close span {
+    font-size: 5vw;
+  }
+  
   .modal-body tr {
     font-size: 3vw;
   }
   
   .modal-body span {
-    font-size: 3vw;
+    font-size: 3vw!important;
   }
   
   /*---------------------------------

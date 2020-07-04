@@ -182,6 +182,23 @@
     font-size: 3vw;
   }
   
+  .tags {
+    padding:0.5rem 1.25rem;
+  }
+  
+  .tags span {
+    margin-right: 1vw;
+  }
+
+  .fa-tag {
+    font-size: 1vw;
+  }
+
+  .tag {
+    font-size: 1vw!important;
+    vertical-align: middle;
+  }
+  
   .modal-body tr {
     font-size: 3vw;
   }
@@ -200,7 +217,7 @@
     margin-bottom: 15vw!important;
   }
   
-  #contact i, span {
+  #contact i, #contact span {
     font-size: 4.8vw!important;
   }
   

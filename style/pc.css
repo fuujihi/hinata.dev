@@ -270,7 +270,6 @@ works
 
 ---------------------------------*/
 #works {
-  font-size: 3.5vw;
   margin: 7vw 0 10vw 0;
 }
 
@@ -296,6 +295,22 @@ works
 .card-title {
   font-size: 1.8vw;
   margin-bottom: 0;
+}
+
+.tags {
+  padding: 1.25rem 1rem;
+}
+
+.tags span {
+  margin-right: 1vw;
+}
+
+.fa-tag {
+  font-size: 1vw;
+}
+
+.tag {
+  font-size: 1vw;
 }
 
 .card:hover {

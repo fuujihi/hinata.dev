@@ -179,24 +179,19 @@
   ---------------------------------*/
   
   .card-title {
-    font-size: 3vw;
+    font-size: 4vw!important;
   }
   
   .tags {
     padding:0.5rem 1.25rem;
   }
-  
-  .tags span {
-    margin-right: 1vw;
-  }
 
   .fa-tag {
-    font-size: 1vw;
+    font-size: 2vw;
   }
 
   .tag {
-    font-size: 1vw!important;
-    vertical-align: middle;
+    font-size: 2.5vw!important;
   }
   
   .modal-body tr {

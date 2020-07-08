@@ -57,11 +57,11 @@
   }
   
   .rectangle :first-child {
-    font-size: 6.5vw;
+    font-size: 6vw;
   }
   
-  .rectangle span {
-    font-size: 3.5vw;
+  .rectangle :nth-child(2) {
+    font-size: 4vw!important;
   }
   
   /*---------------------------------

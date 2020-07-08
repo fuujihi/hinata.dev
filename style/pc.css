@@ -70,8 +70,13 @@ a {
 .rectangle :first-child {
   margin-left: 3vw;
   font-family: 'FOT-TsukuARdGothic Std B', 'ヒラギノ丸ゴ ProN', sans-serif;
-  font-size: 4.5vw;
+  font-size: 4vw;
   vertical-align: baseline;
+}
+
+.rectangle :nth-child(2) {
+  font-size: 3vw;
+  white-space: nowrap;
 }
 
 /*---------------------------------

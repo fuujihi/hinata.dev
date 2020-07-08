@@ -223,6 +223,12 @@ about
 .tooltip {
   position:relative;
 }
+
+.tooltip i {
+  cursor: pointer;
+  cursor: hand;
+}
+
 .tooltip span {
   min-width: 35vw;
   width: 100%;
@@ -250,6 +256,7 @@ about
   -o-transition: all 0.5s ease-in-out; 
   transition: all 0.5s ease-in-out;
 }
+
 .tooltip span:after {
   display: block;
   position: absolute;

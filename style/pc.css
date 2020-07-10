@@ -202,7 +202,15 @@ about
 
 .skills span {
   font-size: 1.8vw;
+}
+
+.star {
+  margin-right: 2vw;
+}
+
+.skills .summary {
   vertical-align: middle;
+
 }
 
 .lang, .logo {

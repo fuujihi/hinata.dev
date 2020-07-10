@@ -177,7 +177,10 @@
   works
 
   ---------------------------------*/
-  
+  .card {
+    margin-bottom: 5vw;
+  }  
+
   .card-title {
     font-size: 4vw!important;
   }

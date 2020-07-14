@@ -74,6 +74,8 @@
     width: 50vw;
     display: block;
     margin:auto;
+    margin-bottom: 4vw;
+    margin-top: 2vw;
   }
   
   #about div span {

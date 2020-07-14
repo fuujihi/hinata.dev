@@ -433,7 +433,7 @@ contact
   text-align: center;
 }
 
-.mail, .facebook {
+.mail, .facebook, .messenger {
   transition: 0.5s;
 }
 .mail:hover {
@@ -444,10 +444,14 @@ contact
   color: #3B5998;
 }
 
+.messenger:hover {
+  color: #0084FF;
+}
+
 .align-center div a {
   text-decoration: none;
 }
 
-.facebook-sp {
+.mail-sp, .facebook-sp, .messenger-sp {
   display: none;
 }

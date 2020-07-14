@@ -233,11 +233,11 @@
     margin-top: 2vh;
   }
   
-  .facebook {
+  .mail, .facebook, .messenger {
     display: none;
   }
   
-  .facebook-sp {
+  .mail-sp, .facebook-sp, .messenger-sp {
     display: inline;
   }
 

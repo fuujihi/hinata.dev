@@ -433,25 +433,29 @@ contact
   text-align: center;
 }
 
-.mail, .facebook, .messenger {
+#contact .logo i, .mail span, .facebook span, .messenger span, .twitter span {
   transition: 0.5s;
 }
-.mail:hover {
+.mail:hover i, .mail:hover span {
   color: #DD5144;
 }
 
-.facebook:hover {
+.facebook:hover i, .facebook:hover span {
   color: #3B5998;
 }
 
-.messenger:hover {
+.messenger:hover i, .messenger:hover span {
   color: #0084FF;
+}
+
+.twitter:hover i, .twitter:hover span {
+  color: #00acee;
 }
 
 .align-center div a {
   text-decoration: none;
 }
 
-.mail-sp, .facebook-sp, .messenger-sp {
+.mail-sp, .facebook-sp, .messenger-sp, .twitter-sp {
   display: none;
 }

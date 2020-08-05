@@ -188,6 +188,16 @@ about
   height: 3vw;
 }
 
+.statses {
+  margin: 3vw 13vw 0 13vw;
+}
+
+.stats {
+  width: auto;
+  height: 13vw;
+  text-align: center;
+}
+
 .skills {
   font-size: 2vw;
 }

@@ -114,6 +114,16 @@
     height: 6vw;
   }
   
+  .statses {
+    margin: 0 13vw 0 13vw;
+  }
+
+  .stats {
+    height: auto;
+    width: 100%!important;
+    margin-top: 3vw;
+  }
+  
   .skills .lang i {
     font-size: 4.5vw;
   }

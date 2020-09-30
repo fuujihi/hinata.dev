@@ -33,7 +33,7 @@ h2 {
   font-size: 2.5vw;
   margin-left: 11vw;
   margin-top: 4vw;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 a {
@@ -266,8 +266,12 @@ about
   margin-right: 1vw;
 }
 
-.career a {
-  color: rgba(49, 192, 212, 0.94);
+.career a small {
+  font-size: 85%; 
+}
+
+.career a, .career a small {
+  color: rgba(49, 192, 212, 0.94)!important;
 }
 
 .career a i {

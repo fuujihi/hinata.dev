@@ -293,23 +293,23 @@ about
   position: absolute;
   top: -8vh;
   margin-left: -18vw;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   visibility: hidden;
   opacity: 0;
   background: #ffffff;
 
-  -moz-border-radius: 5px; 
-  -webkit-border-radius: 5px; 
-  border-radius: 5px; 
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 
-  -moz-box-shadow: 0 0 8px 0 #707070; 
-  -webkit-box-shadow: 0 0 8px 0 #707070; 
-  filter: progid:DXImageTransform.Microsoft.Shadow(color='#707070', Direction=135, Strength=3); 
-  box-shadow: 0 0 8px 0 #707070; 
-  
-  -moz-transition: all 0.5s ease-in-out; 
+  -moz-box-shadow: 0 0 8px 0 #707070;
+  -webkit-box-shadow: 0 0 8px 0 #707070;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#707070', Direction=135, Strength=3);
+  box-shadow: 0 0 8px 0 #707070;
+
+  -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out; 
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 

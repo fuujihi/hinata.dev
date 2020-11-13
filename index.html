@@ -89,9 +89,9 @@
             <span class="name">Hinata Fujihara</span>&ensp;
             <span class="name-jp">-藤原日向葵&thinsp;</span>
             <div class="mt-1">
-              2003年9月6日生まれ。N高等学校在籍。<br>
+              2003年9月6日生まれの<span id="age"></span>。N高等学校在籍。<br>
               中学校では精神の病から不登校だった過去がある。<br>
-              2社でITエンジニアのインターン生として働く、<br>
+              現在3社でITエンジニアのインターン生として働く、<br>
               主にPHPを使用するWebプログラマー。<br>
               趣味・特技はルービックキューブ、手品。<br>
               Apple製品が好き
@@ -287,11 +287,10 @@
                 <span class="period">2019/04 - 現在　</span>
                 <span  class="summary">
                   <a target="_blank" href="https://innovation-power.jp/">株式会社 Innovation Power&thinsp;</a>
-                  
                   <span>業務委託&thinsp;</span>
                   <span class="tooltip">
                     <i class="fas fa-info-circle"></i>
-                    <span><a target="_blank" href="https://innovation-power.jp/powerlab/susgame/">サス・ゲー</a>の開発・運営に携わる</span>
+                    <span><a target="_blank" href="https://innovation-power.jp/powerlab/susgame/">サス・ゲー</a>に関わるシステムの開発に携わる</span>
                   </span>
                 </span>
               </div>
@@ -327,7 +326,7 @@
                   <span>インターン&thinsp;</span>
                   <span class="tooltip">
                     <i class="fas fa-info-circle"></i>
-                    <span>新規WEBサイト立ち上げに携わる</span>
+                    <span>新規WEBサイト立ち上げなどに携わる</span>
                   </span>
                 </span>
               </div>
@@ -339,7 +338,7 @@
                   <span>インターン&thinsp;</span>
                   <span class="tooltip">
                     <i class="fas fa-info-circle"></i>
-                    <span>WEBサイト開発に携わる</span>
+                    <span>WEB開発、新規事業開発に携わる</span>
                   </span>
                 </span>
               </div>
@@ -852,3 +851,20 @@
     </div>
   </body>
 </html>
+
+
+<script>
+    // 年齢を計算して入れる
+    function getAge() {
+        const birthday = '20030906';
+        let today = new Date();
+        let tdate = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate();
+        return Math.floor((tdate - birthday) / 10000);
+    }
+
+    window.onload = function(){
+        let elem = document.getElementById("age");
+        let age = getAge();
+        elem.innerHTML = age+'歳';
+    }
+</script>

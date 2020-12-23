@@ -195,10 +195,14 @@
   ---------------------------------*/
   .card {
     margin-bottom: 4vw;
-  }  
+  }
+
+  .card-body {
+      padding: 1rem;
+  }
 
   .card-title {
-    font-size: 4vw!important;
+    font-size: 3vw!important;
   }
   
   .tags {

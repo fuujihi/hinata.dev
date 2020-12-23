@@ -40,7 +40,7 @@ a {
   text-decoration: none;
 }
 
-.sns, .star, .card-body, .top, img, h5, #nav {
+.sns, .star, .card-body, .top, img, #nav {
   user-select:none;
   -webkit-user-select:none;
   -ms-user-select: none;
@@ -53,11 +53,6 @@ a {
 img {
   pointer-events: none;
 }
-
-b {
-  font-family: 'FOT-TsukuARdGothic Std B', 'ヒラギノ丸ゴ ProN', sans-serif;
-}
-
 /*---------------------------------
 
 トップ画像
@@ -74,7 +69,7 @@ b {
 }
 
 .rectangle {
-  position: absolute; 
+  position: absolute;
   width: 62%;
   height: 20%;
   top: 27vw;
@@ -102,12 +97,6 @@ b {
 ヘッダーナビ
 
 ---------------------------------*/
-.fixedNav {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-}
-
 #nav {
   list-style: none;
   overflow: hidden;
@@ -147,7 +136,6 @@ b {
   bottom: 50px;
 }
 
-/* 鳥さんアニメーション */
 @keyframes yureru {
   0% {transform: rotate(0deg);}
   50% {transform: rotate(20deg);}

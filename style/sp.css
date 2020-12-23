@@ -235,10 +235,6 @@
 
   ---------------------------------*/
   
-  #contact {
-    margin-bottom: 15vw!important;
-  }
-  
   #contact i, #contact span {
     font-size: 4.8vw!important;
   }
@@ -255,4 +251,7 @@
     display: inline;
   }
 
+  .lang, .logo {
+    width: 5vw;
+  }
 }

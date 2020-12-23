@@ -500,4 +500,5 @@ contact
 
 #contact div div a {
   white-space: nowrap;
+  height: 50px;
 }

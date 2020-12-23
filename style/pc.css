@@ -97,6 +97,11 @@ img {
 ヘッダーナビ
 
 ---------------------------------*/
+.fixedNav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
 #nav {
   list-style: none;
   overflow: hidden;

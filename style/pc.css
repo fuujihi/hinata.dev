@@ -184,6 +184,10 @@ about
   font-size: 3.5vw;
 }
 
+.sns a {
+  min-width: 50px;
+}
+
 .qiita-logo {
   height: 3vw;
 }

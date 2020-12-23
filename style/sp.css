@@ -8,17 +8,17 @@
     font-size: 6vw;
     margin-left: 5vw;
   }
-  
+
   h2 {
     font-size: 5vw !important;
     margin-left: 6vw !important;
   }
-  
+
   .col-sm-12 {
     flex: 0 0 100%!important;
     max-width: 100%!important;
   }
-  
+
   /*---------------------------------
 
   ヘッダーナビ
@@ -27,7 +27,7 @@
   #nav {
     height: 10vw;
   }
-   
+
   #nav li a {
     font-size: 5vw;
   }
@@ -35,11 +35,11 @@
   #nav li a span:first-child {
     display: none;
   }
-  
+
   #page_top {
     font-size: 5vw;
   }
-  
+
   /*---------------------------------
 
   トップ画像
@@ -48,22 +48,22 @@
   .top img {
     height: 100vw;
   }
-  
+
   .rectangle {
     width: 85%;
     height: 15% !important;
     top: 60vw;
     line-height: 16vw;
   }
-  
+
   .rectangle :first-child {
     font-size: 6vw;
   }
-  
+
   .rectangle :nth-child(2) {
     font-size: 4vw!important;
   }
-  
+
   /*---------------------------------
 
   about
@@ -77,35 +77,35 @@
     margin-bottom: 4vw;
     margin-top: 2vw;
   }
-  
+
   #about div span {
     text-align: left;
   }
-  
+
   #about .align-center span {
     font-size: 3vw;
   }
-  
+
   #about div .item {
     text-align: left;
   }
-  
+
   .profile {
     text-align: center;
   }
-  
+
   .profile div {
     font-size: 3.5vw;
   }
-  
+
   .name {
     font-size: 5vw!important;
   }
-  
+
   .name-jp {
     font-size: 3vw;
   }
-  
+
   .sns {
     font-size: 6vw!important;
   }
@@ -113,7 +113,7 @@
   .qiita-logo {
     height: 6vw;
   }
-  
+
   .statses {
     margin: 0 13vw 0 13vw;
   }
@@ -123,71 +123,71 @@
     width: 100%!important;
     margin-top: 3vw;
   }
-  
+
   .skills .lang i {
     font-size: 4.5vw;
   }
-  
+
   .lang {
     width: 7vw;
   }
-  
+
   .skills {
     font-size: 5vw;
   }
-  
+
   .star {
     font-size: 4.5vw;
   }
-  
+
   .summary {
     font-size: 3.5vw!important;
     margin-top: 1vw 0 2vw 0;
     display: block;
   }
-  
+
   #about .align-center {
     margin-left: 8vw;
   }
-  
+
   .items {
     text-align: left;
     display: inline;
   }
-  
+
   .career small {
     font-size: 90%!important;
   }
-  
+
   .career a {
     font-size: 2.5vw;
   }
-  
+
   .career div div i {
     font-size: 4.5vw!important;
   }
-  
+
   .period {
     font-size: 3.5vw!important;
     margin-left: 3vw;
   }
-  
+
   .career .summary {
-    margin-left: 8vw; 
+    margin-left: 8vw;
   }
-  
+
   .career .summary a, .career .summary span {
     font-size: 3.5vw!important;
   }
-  
+
   .career .summary i {
     font-size: 3vw;
   }
-  
+
   .tooltip {
     display: none;
   }
-  
+
   /*---------------------------------
 
   works
@@ -204,7 +204,7 @@
   .card-title {
     font-size: 3vw!important;
   }
-  
+
   .tags {
     padding:0.5rem 1.25rem;
   }
@@ -216,41 +216,41 @@
   .tag {
     font-size: 2.5vw!important;
   }
-  
+
   .modal-title {
     font-size: 3.5vw;
   }
-  
+
   .close span {
     font-size: 5vw;
   }
-  
+
   .modal-body tr {
     font-size: 3vw;
   }
-  
+
   .modal-body span {
     font-size: 3vw!important;
   }
-  
+
   /*---------------------------------
 
   contact
 
   ---------------------------------*/
-  
+
   #contact i, #contact span {
     font-size: 4.8vw!important;
   }
-  
+
   #contact .align-center {
     margin-top: 2vh;
   }
-  
+
   .mail-pc, .facebook-pc, .messenger-pc, .twitter-pc {
     display: none;
   }
-  
+
   .mail-sp, .facebook-sp, .messenger-sp, .twitter-sp {
     display: inline;
   }

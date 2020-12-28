@@ -91,7 +91,7 @@
             <span class="name">Hinata Fujihara</span>&ensp;
             <span class="name-jp">-藤原日向葵&thinsp;</span>
             <div class="mt-1">
-              2003年9月6日生まれの<span id="age"></span>。N高等学校在籍。<br>
+              2003年9月6日生まれの<span id="age"></span>歳。N高等学校在籍。<br>
               中学校では病気から不登校だった過去がある。<br>
               複数の企業、団体でITエンジニアとして活動する<br>
               主にPHPを使用するWebプログラマー。<br>
@@ -832,20 +832,3 @@
     </div>
   </body>
 </html>
-
-
-<script>
-    // 年齢を計算して入れる
-    function getAge() {
-        const birthday = '20030906';
-        let today = new Date();
-        let tdate = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate();
-        return Math.floor((tdate - birthday) / 10000);
-    }
-
-    window.onload = function(){
-        let elem = document.getElementById("age");
-        let age = getAge();
-        elem.innerHTML = age+'歳';
-    }
-</script>

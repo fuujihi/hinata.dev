@@ -182,6 +182,14 @@ about
   margin-right: 10px;
 }
 
+.sns i {
+    transition: 0.5s;
+}
+
+.fa-github:hover {
+    color: #24292e;
+}
+
 .qiita-logo {
   height: 3vw;
 }
@@ -464,15 +472,21 @@ contact
   color: #DD5144;
 }
 
-.facebook:hover i, .facebook:hover span {
+.facebook:hover i,
+.facebook:hover span,
+.fa-facebook:hover {
   color: #3B5998;
 }
 
-.messenger:hover i, .messenger:hover span {
+.messenger:hover i,
+.messenger:hover span,
+.fa-facebook-messenger:hover {
   color: #0084FF;
 }
 
-.twitter:hover i, .twitter:hover span {
+.twitter:hover i,
+.twitter:hover span,
+.fa-twitter:hover {
   color: #00acee;
 }
 

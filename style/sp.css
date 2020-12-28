@@ -78,6 +78,10 @@
     margin-top: 2vw;
   }
 
+  #about .row {
+      margin: 0;
+  }
+
   #about div span {
     text-align: left;
   }
@@ -91,7 +95,7 @@
   }
 
   .profile {
-    text-align: center;
+    padding: 0 10%;
   }
 
   .profile div {
@@ -115,7 +119,7 @@
   }
 
   .statses {
-    margin: 0 13vw 0 13vw;
+    margin: 20px 13vw 0 13vw;
   }
 
   .stats {

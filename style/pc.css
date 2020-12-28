@@ -161,12 +161,19 @@ about
   margin-top: 2vw;
 }
 
+#about .row {
+  /* margin: 0 15%; */
+}
+
 .name {
   font-size: 3.5vw;
 }
 
 .name-jp {
   font-size: 2vw;
+}
+.profile {
+    white-space: nowrap;
 }
 
 .profile div {
@@ -194,14 +201,12 @@ about
   height: 3vw;
 }
 
-.statses {
-  margin: 3vw 13vw 0 13vw;
-}
-
 .stats {
-  width: auto;
-  height: 13vw;
-  text-align: center;
+  width: 60%;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  padding-right: 10%;
 }
 
 .skills {

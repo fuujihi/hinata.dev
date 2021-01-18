@@ -145,6 +145,7 @@
     font-size: 3.5vw!important;
     margin-top: 1vw 0 2vw 0;
     display: block;
+    margin-left: 9.5vw;
   }
 
   #about .align-center {
@@ -164,17 +165,16 @@
     font-size: 2.5vw;
   }
 
+  .career div div {
+      width: 7vw;
+  }
+
   .career div div i {
     font-size: 4.5vw!important;
   }
 
   .period {
     font-size: 3.5vw!important;
-    margin-left: 3vw;
-  }
-
-  .career .summary {
-    margin-left: 8vw;
   }
 
   .career .summary a, .career .summary span {
@@ -194,6 +194,10 @@
   works
 
   ---------------------------------*/
+  #works > div {
+      margin: 0 7vw 0 7vw;
+  }
+
   .card {
     margin-bottom: 4vw;
   }
@@ -256,7 +260,7 @@
     display: inline;
   }
 
-  .lang, .logo {
+  .logo {
     width: 5vw;
   }
 }

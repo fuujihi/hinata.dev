@@ -210,7 +210,10 @@ about
 
 .skills .lang i {
   font-size: 3vw;
-  margin-right: 1vw;
+}
+
+.skills .lang {
+    margin-right: 1vw;
 }
 
 .skills i {
@@ -237,6 +240,7 @@ about
 
 .lang {
     width: 5vw;
+    vertical-align: middle;
 }
 
 .logo {
@@ -274,9 +278,12 @@ about
   margin-top: auto;
 }
 
+.career div div {
+    margin-right: 2vw;
+}
+
 .career div div i {
   font-size: 3vw;
-  margin-right: 1vw;
 }
 
 .career small {

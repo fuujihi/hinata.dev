@@ -152,13 +152,19 @@ img {
 about
 
 ---------------------------------*/
+.profile-image-wap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #about .profile-img {
   -webkit-border-radius: 1.5vw;
-  width: 30vw;
+  width: 32vw;
+  height: 22vw;
   display: block;
-  margin: auto;
   z-index: 1;
-  margin-top: 2vw;
+  object-fit: cover;
 }
 
 .name {

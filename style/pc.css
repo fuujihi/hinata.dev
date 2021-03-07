@@ -3,11 +3,51 @@
 全体
 
 ---------------------------------*/
+:root {
+  --main-text: #707070;
+  --main-bg: #fff;
+  --content-bg: #fff;
+  --marker: #e7e7e7;
+  --shadow: #d7d3d3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-text: #bababa;
+    --main-bg: #2d2d2d;
+    --content-bg: #424242;
+    --marker: #fff;
+    --shadow: #868686;
+  }
+}
+
+:root[theme="light"] {
+  --main-text: #707070;
+  --main-bg: #fff;
+  --content-bg: #fff;
+  --marker: #e7e7e7;
+  --shadow: #d7d3d3;
+}
+
+:root[theme="dark"] {
+  --main-text: #bababa;
+  --main-bg: #2d2d2d;
+  --content-bg: #424242;
+  --marker: #fff;
+  --shadow: #868686;
+}
+
+
 * {
   margin: 0px;
   padding: 0px;
   font-family: 'FOT-TsukuARdGothic Std R', 'ヒラギノ丸ゴ ProN', sans-serif;
-  color: #707070;
+  color: var(--main-text);
+  transition: .3s;
+}
+
+body {
+  background-color: var(--main-bg);
 }
 
 #wrapper {
@@ -73,10 +113,11 @@ img {
   width: 62%;
   height: 20%;
   top: 27vw;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--main-bg);
+  opacity: 0.8;
   line-height: 11vw;
   font-size: 3vw;
-  color: #605F5F;
+  color: var(--main-text);
   vertical-align: baseline;
 }
 
@@ -106,7 +147,8 @@ img {
   list-style: none;
   overflow: hidden;
   height: 5vw;
-  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
+  background-color: var(--main-bg);
   box-shadow: 0px 1.5px 0px 0px rgba(0,0,0,0.1);
   z-index: 1000;
   margin-bottom: auto;
@@ -134,11 +176,19 @@ img {
   display: inline-block;
 }
 
-#page_top {
-  font-size: 2.5vw;
+#thema {
+  font-size: 3vw;
   position: fixed;
-  right: -50px;
+  right: 50px;
   bottom: 50px;
+  cursor: pointer;
+}
+#thema i {
+  transition: .6s;
+  color: var(--main-text)
+}
+#thema .fas {
+  color: #ffd24a!important;
 }
 
 @keyframes yureru {
@@ -258,11 +308,11 @@ about
 }
 
 .marker-animation {
-  background-image: -webkit-linear-gradient(left, transparent 50%, #e7e7e7 50%);
-  background-image: -moz-linear-gradient(left, transparent 50%, #e7e7e7 50%);
-  background-image: -ms-linear-gradient(left, transparent 50%, #e7e7e7 50%);
-  background-image: -o-linear-gradient(left, transparent 50%, #e7e7e7 50%);
-  background-image: linear-gradient(left, transparent 50%, #e7e7e7 50%);
+  background-image: -webkit-linear-gradient(left, transparent 50%, var(--marker) 50%);
+  background-image: -moz-linear-gradient(left, transparent 50%, var(--marker) 50%);
+  background-image: -ms-linear-gradient(left, transparent 50%, var(--marker) 50%);
+  background-image: -o-linear-gradient(left, transparent 50%, var(--marker) 50%);
+  background-image: linear-gradient(left, transparent 50%, var(--marker) 50%);
   background-repeat: repeat-x;
   background-size: 200% .8em;
   background-position: 0.5em;
@@ -322,7 +372,7 @@ about
   padding: 10px 20px;
   visibility: hidden;
   opacity: 0;
-  background: #ffffff;
+  background: var(--content-bg);
 
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -380,6 +430,7 @@ works
   margin-top: 2vw;
   -webkit-transition: all .3s;
   transition: all .3s;
+  background-color: var(--content-bg);
 }
 
 .modal-title {
@@ -415,7 +466,7 @@ works
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   transform: translateY(-10px);
-  box-shadow: 5px 5px 0 0 #d7d3d3;
+  box-shadow: 5px 5px 0 0 var(--shadow);
 }
 
 .modal-dialog {
@@ -439,9 +490,14 @@ table th, table td{
   padding: 15px 0;
 }
 
+.modal-header {
+    background-color: var(--content-bg);
+}
+
 .modal-body {
   font-size: 1.5vw;
   text-align: center;
+  background-color: var(--content-bg);
 }
 
 .modal-body span {

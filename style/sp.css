@@ -36,8 +36,10 @@
     display: none;
   }
 
-  #page_top {
-    font-size: 5vw;
+  #thema {
+    font-size: 7vw;
+    right: 25px;
+    bottom: 25px;
   }
 
   /*---------------------------------

@@ -1,27 +1,22 @@
 $(function () {
+    const age = getAge();
+    $('#age').text(age);
+
     // ページトップ
-    let $offset = $('#nav').offset(),
-        navHeight = $('#nav').outerHeight();
+    let navHeight = $('#nav').outerHeight(true);
+    let offset = $('#nav').offset().top;
+    $(window).resize(function() {
+        offset = $('#nav').offset().top;
+    }, false );
     $(window).scroll(function () {
-        if ($(window).scrollTop() > $offset.top) {
+        if ($(window).scrollTop() > offset) {
             $('#nav').addClass('fixedNav');
-            $('body').css('padding-top', navHeight);
-            $('#page_top').stop().animate({
-                'right': '50px'
-            }, 300);
+            if (!$('#dummy').length) $('body').prepend('<div id="dummy" style="margin-top:5vw"></div>')
         } else {
             $('#nav').removeClass('fixedNav');
-            $('body').css('padding-top', 0);
-            $('#page_top').stop().animate({
-                'right': '-50px'
-            }, 300);
+            if ($('#dummy').length) $('#dummy').remove();
+            offset = $('#nav').offset().top;
         }
-    });
-    $('#page_top').click(function () {
-        $('body, html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
     });
 
     // ヘッダースムーススクロール
@@ -34,11 +29,30 @@ $(function () {
         }, 500);
     });
 
-    // 年齢を計算して入れる
-    (function() {
-        const age = getAge();
-        $('#age').text(age);
-    })();
+    let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let isDarkOS = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const changeThema = function(isDarkOS) {
+        if (isDarkOS.matches) document.documentElement.setAttribute('theme', 'dark');
+        else document.documentElement.setAttribute('theme', 'light');
+        isDark = isDarkOS.matches;
+        changeThemaIcon(isDark);
+    }
+    isDarkOS.addListener(changeThema);
+
+    if (localStorage.theme) {
+        document.documentElement.setAttribute('theme', localStorage.theme);
+        isDark = localStorage.theme == 'dark' ? true : false;
+        changeThemaIcon(isDark, false);
+    }
+
+    $('#thema').click(function () {
+        if (isDark) document.documentElement.setAttribute('theme', 'light');
+        else document.documentElement.setAttribute('theme', 'dark');
+        isDark = !isDark;
+        changeThemaIcon(isDark);
+    });
+
 });
 
 // マーカー
@@ -56,4 +70,12 @@ function getAge() {
     let today = new Date();
     let tdate = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate();
     return Math.floor((tdate - birthday) / 10000);
+}
+
+function changeThemaIcon(isDark, saveLocalStFlg=true) {
+    if (isDark) $("#thema").html('<i class="fas fa-moon"></i>');
+    else $("#thema").html('<i class="far fa-moon"></i>');
+    if (saveLocalStFlg) {
+        localStorage.theme = isDark ? 'dark' : 'light';
+    }
 }

@@ -5,36 +5,40 @@
 ---------------------------------*/
 :root {
   --main-text: #707070;
-  --main-bg: #fff;
   --content-bg: #fff;
-  --marker: #e7e7e7;
+  --qiita-bg: rgba(#fff, 0);
+  --main-bg: #fff;
   --shadow: #d7d3d3;
+  --marker: #e7e7e7;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --main-text: #bababa;
-    --main-bg: #2d2d2d;
     --content-bg: #424242;
-    --marker: #fff;
+    --qiita-bg: #bababa;
+    --main-bg: #2d2d2d;
     --shadow: #868686;
+    --marker: #fff;
   }
 }
 
 :root[theme="light"] {
   --main-text: #707070;
-  --main-bg: #fff;
   --content-bg: #fff;
-  --marker: #e7e7e7;
+  --qiita-bg: rgba(#fff, 0);
+  --main-bg: #fff;
   --shadow: #d7d3d3;
+  --marker: #e7e7e7;
 }
 
 :root[theme="dark"] {
   --main-text: #bababa;
-  --main-bg: #2d2d2d;
   --content-bg: #424242;
-  --marker: #fff;
+  --qiita-bg: #bababa;
+  --main-bg: #2d2d2d;
   --shadow: #868686;
+  --marker: #fff;
 }
 
 
@@ -248,6 +252,7 @@ about
 
 .qiita-logo {
   height: 3vw;
+  background-color: var(--qiita-bg);
 }
 
 .statses {

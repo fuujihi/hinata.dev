@@ -28,8 +28,9 @@
     height: 10vw;
   }
 
-  #nav li a {
+  #nav li a span {
     font-size: 5vw;
+    font-weight: bold;
   }
 
   #nav li a span:first-child {

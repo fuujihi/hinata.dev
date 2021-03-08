@@ -44,6 +44,8 @@ $(function () {
         document.documentElement.setAttribute('theme', localStorage.theme);
         isDark = localStorage.theme == 'dark' ? true : false;
         changeThemaIcon(isDark, false);
+    } else {
+        changeThemaIcon(isDark)
     }
 
     $('#thema').click(function () {

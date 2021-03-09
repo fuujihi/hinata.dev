@@ -132,95 +132,19 @@
         <h2>career</h2>
           <div class="align-center">
             <div class="career row items">
-              <div class="mb-3">
-                <div><i class="fas fa-graduation-cap"></i></div>
-                <span class="period">2019/03 - 現在 </span>
+              <div class="mb-3" v-for="career in careers">
+                <div>
+                  <i v-if="career.type=='school'" class="fas fa-graduation-cap"></i>
+                  <i v-if="career.type=='employment'" class="fas fa-briefcase"></i>
+                </div>
+                <span class="period">{{ career.start }} - {{ career.end }} </span>
                 <span class="summary">
-                  <a target="_blank" rel="noopener" href="https://nnn.ed.jp/">学校法人角川ドワンゴ学園N高等学校 </a>
+                  <a target="_blank" rel="noopener" :href="career.url">{{ career.name }} </a>
+                  <span v-if="career.employment_status">{{ career.employment_status }} </span>
                 </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2019/04 - 現在 </span>
-                <span  class="summary">
-                  <a target="_blank" rel="noopener" href="https://innovation-power.jp/">株式会社 Innovation Power </a>
-                  <span>業務委託 </span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span><a target="_blank" rel="noopener" href="https://susgame.jp/">サス・ゲー</a>に関わるシステムの開発に携わる</span>
-                  </span>
-                </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2019/04 - 2020/12 </span>
-                <span  class="summary">
-                  <a target="_blank" rel="noopener" href="http://i-tank.jp/">株式会社 アイタンクジャパン </a>
-                  <span>インターン </span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span><a target="_blank" rel="noopener" href="https://careerbaito.com">キャリアバイト</a>の開発・運用に携わる</span>
-                  </span>
-                </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2020/02 - 2020/06 </span>
-                <span class="summary">
-                  <a target="_blank" rel="noopener" href="https://corp.en-japan.com/">エン・ジャパン 株式会社 </a>
-                  <span>インターン </span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Kofax社のRPAを用いて業務を自動化</span>
-                  </span>
-                </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2020/09 - 2020/12 </span>
-                <span class="summary">
-                  <a target="_blank" rel="noopener" href="https://www.mic-info.co.jp/aboutus/">株式会社 MIC </a>
-                  <span>インターン </span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span>新規WEBサイト立ち上げなどに携わる</span>
-                  </span>
-                </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2020/10 - 現在 </span>
-                <span class="summary">
-                  <a target="_blank" rel="noopener" href="https://entwickeln-zukunft.com/"><small>エントヴィッケルン・ツークンフト株式会社</small></a>
-                  <span><small>インターン </small></span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span>WEB開発、新規事業開発に携わる</span>
-                  </span>
-                </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2021/01 - 現在 </span>
-                <span class="summary">
-                  <a target="_blank" rel="noopener" href="https://corp.en-japan.com/">エン・ジャパン 株式会社 </a>
-                  <span>インターン </span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span><a target="_blank" rel="noopener" href="https://careerbaito.com">キャリアバイト</a>の開発・運用に携わる</span>
-                  </span>
-                </span>
-              </div>
-              <div class="mb-3">
-                <div><i class="fas fa-briefcase"></i></div>
-                <span class="period">2021/01 - 現在 </span>
-                <span class="summary">
-                  <a target="_blank" rel="noopener" href="https://www.senryaku.metro.tokyo.lg.jp/"><small>東京都戦略政策情報推進本部</small> </a>
-                  <span><small>会計年度任用職員 </small></span>
-                  <span class="tooltip">
-                    <i class="fas fa-info-circle"></i>
-                    <span>主に<a target="_blank" rel="noopener" href="https://stopcovid19.metro.tokyo.lg.jp/">感染症対策サイト</a>開発に携わる</span>
-                  </span>
+                <span class="tooltip" v-if="career.tooltip">
+                  <i class="fas fa-info-circle"></i>
+                  <span v-html="career.tooltip"></span>
                 </span>
               </div>
             </div>
@@ -355,10 +279,12 @@
       el: '#wrapper',
       data: {
         skills: null,
+        careers: null,
         works: null
       },
       created: function() {
         axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
+        axios.get('./data/careers.json').then(function(response) { app.$data.careers = response.data.careers; });
         axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
       }
     })

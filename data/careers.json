@@ -1,0 +1,67 @@
+{
+    "careers":[
+        {
+            "name": "学校法人角川ドワンゴ学園N高等学校",
+            "type": "school",
+            "start": "2019/04",
+            "end": "現在",
+            "url": "https://nnn.ed.jp/",
+            "employment_status": null,
+            "tooltip": null
+        },
+        {
+            "name": "株式会社 Innovation Power",
+            "type": "employment",
+            "start": "2019/04",
+            "end": "現在",
+            "url": "https://innovation-power.jp/",
+            "employment_status": "業務委託",
+            "tooltip": "<a target=\"_blank\" rel=\"noopener\" href=\"https://susgame.jp/\">サス・ゲー</a>の開発、WS運営に携わる"
+        },
+        {
+            "name": "株式会社 アイタンクジャパン",
+            "type": "employment",
+            "start": "2019/04",
+            "end": "2020/12",
+            "url": null,
+            "employment_status": "インターン",
+            "tooltip": "<a target=\"_blank\" rel=\"noopener\" href=\"https://careerbaito.com\">キャリアバイト</a>の開発・運用に携わる"
+        },
+        {
+            "name": "エン・ジャパン 株式会社",
+            "type": "employment",
+            "start": "2020/02",
+            "end": "2020/06",
+            "url": "https://corp.en-japan.com/",
+            "employment_status": "インターン",
+            "tooltip": "Kofax社のRPAを用いて業務を自動化"
+        },
+        {
+            "name": "株式会社 MIC",
+            "type": "employment",
+            "start": "2020/09",
+            "end": "2020/12",
+            "url": "https://www.mic-info.co.jp/aboutus/",
+            "employment_status": "インターン",
+            "tooltip": "新規WEBサイト立ち上げなどに携わる"
+        },
+        {
+            "name": "エン・ジャパン 株式会社",
+            "type": "employment",
+            "start": "2021/01",
+            "end": "現在",
+            "url": "https://corp.en-japan.com/",
+            "employment_status": "インターン",
+            "tooltip": "<a target=\"_blank\" rel=\"noopener\" href=\"https://careerbaito.com\">キャリアバイト</a>の開発・運用に携わる"
+        },
+        {
+            "name": "東京都戦略政策情報推進本部",
+            "type": "employment",
+            "start": "2021/01",
+            "end": "現在",
+            "url": "https://www.senryaku.metro.tokyo.lg.jp/",
+            "employment_status": "会計年度任用職員",
+            "tooltip": "主に<a target=\"_blank\" rel=\"noopener\" href=\"https://stopcovid19.metro.tokyo.lg.jp/\">感染症対策サイト</a>開発に携わる"
+        }
+    ]
+}

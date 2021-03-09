@@ -118,13 +118,6 @@
               <div class="item skills mb-3" v-for="skill in skills">
                 <div class="lang"><i v-bind:class="[skill.class_prefix, skill.class]"></i></div>
                 <span class="star">
-                    <!-- <span v-for="n of Math.floor(skill.star)"><i class="fa-fw fas fa-star"></i></span>
-                    <span v-if="String(skill.star).split('.')[1]"><i class="fa-fw fas fa-star-half-alt"></i></span>
-                    <span v-for="n of 5 - Math.ceil(skill.star)"><i class="fa-fw far fa-star"></i></span> -->
-                    <!-- <span v-if="String(skill.star).split('.')[1]"><i class="fa-fw fas fa-star-half-alt"></i></span>
-                    <span><i class="fa-fw fas fa-star"></i></span>
-                    <span><i class="fa-fw fas fa-star"></i></span>
-                    <span><i class="fa-fw fas fa-star"></i></span> -->
                     <span v-for="n of 5">
                         <i v-if="n<=Math.floor(skill.star)" class="fa-fw fas fa-star"></i>
                         <i v-if="n>Math.ceil(skill.star)" class="fa-fw far fa-star"></i>

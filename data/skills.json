@@ -1,0 +1,88 @@
+{
+    "skills": [
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-php",
+    		"star": 4.5,
+    		"detail": "CakePHPの実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-aws",
+    		"star": 2.5,
+    		"detail": "Ec2,RDS,Lambda,Route53等の実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fas",
+    		"class": "fa-database",
+    		"star": 3,
+    		"detail": "RDBの基本は理解。MySQLの実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-js-square",
+    		"star": 3,
+    		"detail": "jQueryによるUI/UX改善等の実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-node-js",
+    		"star": 3,
+    		"detail": "LambdaにてSlackコマンド実装の実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-vuejs",
+    		"star": 2,
+    		"detail": "コンポーネント、非同期処理等の実装経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-google",
+    		"star": 3,
+    		"detail": "GASを用いたスクレイピング等の実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-python",
+    		"star": 2,
+    		"detail": "基本は理解。趣味でSlackBot作成経験あり。"
+    	},
+        {
+    		"class_prefix": "fas",
+    		"class": "fa-gem",
+    		"star": 2,
+    		"detail": "基本は理解。非同期いいね機能作成経験あり。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-html5",
+    		"star": 4.5,
+    		"detail": "このサイト程度の基本的なものは書ける。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-css3-alt",
+    		"star": 3,
+    		"detail": "HTMLと同じくこのサイト程度のものは書ける。"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-wordpress",
+    		"star": 3,
+    		"detail": "簡単なサイト作成が可能。実務経験あり"
+    	},
+        {
+    		"class_prefix": "fab",
+    		"class": "fa-git",
+    		"star": 4.5,
+    		"detail": "開発に困らない程度に使える。実務経験あり。"
+    	},
+        {
+    		"class_prefix": "fas",
+    		"class": "fa-robot",
+    		"star": 3,
+    		"detail": "Kofax Kapow 10によるRPAの実務経験あり。"
+    	}
+    ]
+}

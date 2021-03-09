@@ -54,6 +54,10 @@ body {
   background-color: var(--main-bg);
 }
 
+[v-cloak] {
+  display: none;
+}
+
 #wrapper {
   width:100%;
   overflow:hidden;

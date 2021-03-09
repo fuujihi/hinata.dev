@@ -253,112 +253,55 @@
       <div id="works" class="mb-4">
         <h1>works</h1>
         <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#careerbaito">
+          <div class="col-md-6 col-sm-12" v-for="(work, index) in works">
+            <span data-toggle="modal" :data-target="'#work-'+index">
               <div class="card">
-                <img class="card-img-top" src="./image/works/careerbaito.jpg" alt="インターン求人サイト careerbaito.com">
+                <img class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title">
                 <div class="card-body">
-                  <div class="card-title">インターン求人サイト careerbaito.com</div>
+                  <div class="card-title">{{ work.title }}</div>
                 </div>
                 <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> インターン</span>
-                  <span class="tag"><i class="fas fa-tag"></i> CakePHP</span>
-                  <span class="tag"><i class="fas fa-tag"></i> MySQL</span>
-                  <span class="tag"><i class="fas fa-tag"></i> jQuery</span>
-                </div>
-              </div>
-          </span>
-            <div class="modal fade" id="careerbaito" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">長期実践型インターンシップ求人サイト</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/careerbaito.jpg" alt="インターン求人サイト careerbaito.com">
-                    <span class="mt-5">
-                      エン・ジャパン株式会社でのインターンで開発に参加。<br>
-                      主にバックエンドを担当。<br>
-                      機能開発・運用やバグ修正など細かい作業から、UX向上のための変更なども行う。<br>
-                      企業/社内向けCMSの機能開発や、AWSのEC2インスタンスなどのインフラ構築にも携わる。
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>PHP(CakePHP)</td>
-                        <td>JS(jQuery)</td>
-                        <td>MySQL</td>
-                      </tr>
-                      <tr>
-                        <th>その他</th>
-                        <td>AWS</td>
-                        <td>ansible</td>
-                        <td>liquibase</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td colspan="3">2019/04 ~ 現在</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://careerbaito.com">careerbaito.com</a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#covid-19">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/covid-19.png" alt="東京都新型コロナウイルス感染症対策サイト">
-                <div class="card-body">
-                  <div class="card-title">東京都新型コロナウイルス感染症対策サイト</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> OSS</span>
-                  <span class="tag"><i class="fas fa-tag"></i> PHP</span>
-                  <span class="tag"><i class="fas fa-tag"></i> HTML/CSS/JS</span>
+                  <span v-for="tag in work.tags" class="tag"><i class="fas fa-tag"></i> {{ tag }}</span>
                 </div>
               </div>
             </span>
-            <div class="modal fade" id="covid-19" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal fade" :id="'work-'+index" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <div class="modal-title">東京都新型コロナウイルス感染症対策サイト</div>
+                    <div class="modal-title">{{ work.title }}</div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/covid-19.png" alt="東京都新型コロナウイルス感染症対策サイト">
-                    <span class="mt-4">
-                      Vue.jsを用いたトップページの改修に携わる。<br>
-                      また、非公開のリポジトリにて東京都の管理するExcelなどのデータからオープンデータを生成するPHPスクリプトの開発を行う。
-                    </span>
+                    <img class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title">
+                    <span class="mt-5" v-html="work.detail"></span>
                     <table class="mt-5">
                       <tr>
                         <th>使用言語</th>
-                        <td>PHP</td>
-                        <td>JS(Vue.js)</td>
-                        <td>HTML/CSS</td>
+                        <td v-if="work.languages.length==1" colspan="3">{{ work.languages[0] }}</td>
+                        <td v-for="lang in work.languages" v-if="work.languages.length>1">{{ lang }}</td>
+                      </tr>
+                      <tr v-if="work.skills.length">
+                        <th>その他</th>
+                        <td v-if="work.skills.length==1" colspan="3">{{ work.skills[0] }}</td>
+                        <td v-for="skill in work.skills" v-if="work.skills.length>1">{{ skill }}</td>
                       </tr>
                       <tr>
                         <th>開発期間</th>
-                        <td colspan="3">2020/01 ~ 現在</td>
+                        <td colspan="3">{{ work.period }}</td>
                       </tr>
                       <tr>
                         <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://stopcovid19.metro.tokyo.lg.jp/">stopcovid19.metro.tokyo.lg.jp</a></td>
+                        <td colspan="3">
+                            <a v-if="work.url_href" target="_blank" rel="noopener" :href="work.url_href">{{ work.url_text }}</a>
+                            <a v-if="!work.url_href && work.github" target="_blank" rel="noopener" :href="work.github">GitHub <i class="fab fa-github"></i></a>
+                        </td>
                       </tr>
-                      <tr>
+                      <tr v-if="work.url_href && work.github">
                           <th></th>
-                          <td colspan="3"><a target="_blank" rel="noopener" href="https://github.com/tokyo-metropolitan-gov/covid19/">GitHub <i class="fab fa-github"></i></a></td>
+                          <td colspan="3"><a target="_blank" rel="noopener" :href="work.github">GitHub <i class="fab fa-github"></i></a></td>
                       </tr>
                     </table>
                   </div>
@@ -366,368 +309,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#entwickeln">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/entwickeln.jpg" alt="Entwickeln Zukunft 公式Webサイト">
-                <div class="card-body">
-                  <div class="card-title">Entwickeln Zukunft 公式Webサイト</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> インターン</span>
-                  <span class="tag"><i class="fas fa-tag"></i> HTML/CSS/JS</span>
-                  <span class="tag"><i class="fas fa-tag"></i> Figma</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="entwickeln" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">Entwickeln Zukunft 公式Webサイト</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/entwickeln.jpg" alt="Entwickeln Zukunft 公式Webサイト">
-                    <span class="mt-4">
-                      デザイン改修、レスポンシブ対応を担当。<br>
-                      Figmaからコーディングを行なった。
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>HTML</td>
-                        <td>CSS</td>
-                        <td>JS(jQuery)</td>
-                      </tr>
-                      <tr>
-                        <th>その他</th>
-                        <td colspan="3">Figma</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td colspan="3">1ヶ月</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://entwickeln-zukunft.com">entwickeln-zukunft.com</a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#coderdojokashiwa">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/CoderDojoKashiwa.jpg" alt="CoderDojo Kashiwa 公式Webサイト">
-                <div class="card-body">
-                  <div class="card-title">CoderDojo Kashiwa 公式Webサイト</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> ボランティア</span>
-                  <span class="tag"><i class="fas fa-tag"></i> PHP</span>
-                  <span class="tag"><i class="fas fa-tag"></i> MySQL</span>
-                  <span class="tag"><i class="fas fa-tag"></i> HTML/CSS/JS</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="coderdojokashiwa" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">CoderDojo Kashiwa公式Webサイト</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/CoderDojoKashiwa.jpg" alt="CoderDojo Kashiwa 公式Webサイト">
-                    <span class="mt-4">
-                      主にバックエンドを担当。<br>
-                      初めて本格的にコードを書いたプロジェクト。<br>
-                      PHPやMySQLの基礎をこのサイトを作りながら学んだ。<br>
-                      ログイン周りの実装はフロントエンドも携わっている。
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>PHP</td>
-                        <td>MySQL</td>
-                        <td>CSS(BootStrap)</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td colspan="3">半年</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://coderdojo-kashiwa.com">coderdojo-kashiwa.com</a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#susgame">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/susgame.jpg" alt="susgame">
-                <div class="card-body">
-                  <div class="card-title">サス・ゲー 管理システム</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> 業務委託</span>
-                  <span class="tag"><i class="fas fa-tag"></i> PHP</span>
-                  <span class="tag"><i class="fas fa-tag"></i> MySQL</span>
-                  <span class="tag"><i class="fas fa-tag"></i> jQuery</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="susgame" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">サス・ゲー 管理システム</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/susgame.jpg" alt="susgame">
-                    <span class="mt-4">
-                      小中学生向けWS、サス・ゲーのゲームを管理するシステム。<br>
-                      株式会社 Innovation Power からの業務委託として開発。<br>
-                      Minecraftのサーバー、プレイヤーなどをシームレスに管理できるようにしている。
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>PHP</td>
-                        <td>MySQL</td>
-                        <td>JS(jQuery)</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td colspan="3">3ヶ月</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://susgame.jp/">サス・ゲー公式サイト</a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#portfolio">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/portfolio.jpg" alt="HINATA FUJIHARA’s portfolio">
-                <div class="card-body">
-                  <div class="card-title">HINATA FUJIHARA’s portfolio</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> 個人開発</span>
-                  <span class="tag"><i class="fas fa-tag"></i> jQuery</span>
-                  <span class="tag"><i class="fas fa-tag"></i> Bootstrap</span>
-                  <span class="tag"><i class="fas fa-tag"></i> XD</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="portfolio" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">HINATA FUJIHARA’s portfolio</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/portfolio.jpg" alt="HINATA FUJIHARA’s portfolio">
-                    <span class="mt-4">
-                      このWebサイト。<br>
-                      時間のある時に少しずつ作って2020/06に完成。<br>
-                      デザインは素人なのでXDを使ってプロトタイプを作成した。<br>
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>HTML</td>
-                        <td>CSS(Bootstrap)</td>
-                        <td>JS(jQuery)</td>
-                      </tr>
-                      <tr>
-                        <th>その他</th>
-                        <td colspan="3">Adobe XD</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td colspan="3">3ヶ月程度(更新継続中)</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://hinata.dev">hinata.dev</a></td>
-                      </tr>
-                      <tr>
-                        <th></th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://github.com/hinatao3o/hinata.dev">GitHub <i class="fab fa-github"></i></a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#lunchbot">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/ランチ提案SlackBot.jpg" alt="ランチ提案SlackBot">
-                <div class="card-body">
-                  <div class="card-title">ランチ提案Slack Bot</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> 個人開発</span>
-                  <span class="tag"><i class="fas fa-tag"></i> Python</span>
-                  <span class="tag"><i class="fas fa-tag"></i> SlackBot</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="lunchbot" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">ランチ提案Slack Bot</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/ランチ提案SlackBot.jpg" alt="ランチ提案SlackBot">
-                    <span class="mt-4">
-                      趣味として作ったSlack Bot。<br>
-                      Pythonを書いたことがなかったので試しに書いてみたもの。<br>
-                      ぐるなびのAPIを使用して新宿御苑周辺（オフィス周辺）の飲食店を探してくれる。<br>
-                      フリーワード検索にも対応。
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>Python</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td>1週間</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://github.com/hinatao3o/slack_lunch_bot">GitHub <i class="fab fa-github"></i></a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#like">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/like.jpg" alt="Ruby(Rails)で非同期いいね">
-                <div class="card-body">
-                  <div class="card-title">Ruby(Rails)で非同期いいね</div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> 個人開発</span>
-                  <span class="tag"><i class="fas fa-tag"></i> Ruby on Rails</span>
-                  <span class="tag"><i class="fas fa-tag"></i> MySQL</span>
-                  <span class="tag"><i class="fas fa-tag"></i> jQuery</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="like" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">Ruby(Rails)で非同期いいね</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <video src="./image/works/like.webm" loop autoplay muted style="display:block;margin:auto;max-width:100%;" poster="./image/works/like.jpg"></video>
-                    <span class="mt-4">
-                      Rubyを触ったことがなかったので作ってみたもの。<br>
-                      Railsを使用して、非同期でいいね機能を実装。<br>
-                      他ユーザーからのいいねがある場合にマッチングする機能もある。<br>
-                      DB構造から作ってある。
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>使用言語</th>
-                        <td>Ruby(Rails)</td>
-                        <td>JS(jQuery)</td>
-                      </tr>
-                      <tr>
-                        <th>開発期間</th>
-                        <td colspan="3">2週間</td>
-                      </tr>
-                      <tr>
-                        <th>リンク</th>
-                        <td colspan="3"><a target="_blank" rel="noopener" href="https://github.com/hinatao3o/like-function-on-Ruby">GitHub <i class="fab fa-github"></i></a></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <span data-toggle="modal" data-target="#story">
-              <div class="card">
-                <img class="card-img-top" src="./image/works/インターン体験記.jpg" alt="インターン体験記">
-                <div class="card-body">
-                  <div class="card-title">インターン体験記 </div>
-                </div>
-                <div class="card-body tags">
-                  <span class="tag"><i class="fas fa-tag"></i> インターン</span>
-                  <span class="tag"><i class="fas fa-tag"></i> ブログ記事</span>
-                </div>
-              </div>
-            </span>
-            <div class="modal fade" id="story" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="modal-title">15歳の高校生がアルバイトではなくインターンを選んだ理由</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="card-img-top" src="./image/works/インターン体験記.jpg" alt="インターン体験記">
-                    <span class="mt-4">
-                      インターンに参加して3ヶ月たった頃に書いた体験記。<br>
-                      インターンに参加する前後の変化や、どういった成長に繋がったかなどを書いた。<br>
-                      Facebookでたくさんの方からの反応があった。<br>
-                    </span>
-                    <table class="mt-5">
-                      <tr>
-                        <th>リンク</th>
-                        <td><a target="_blank" rel="noopener" href="https://careerbaito.com/story/detail/140">外部リンク</a><i class="fas fa-external-link-alt"></i></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-         </div>
+        </div>
       </div>
       <div class="mb-5" id="contact">
         <h1>contact</h1>
@@ -772,10 +354,12 @@
     var app = new Vue({
       el: '#wrapper',
       data: {
-        skills: null
+        skills: null,
+        works: null
       },
       created: function() {
         axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
+        axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
       }
     })
   </script>

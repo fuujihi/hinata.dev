@@ -187,7 +187,8 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title">
+                    <img v-if="typeof(work.modal_image) == 'undefined'" class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title">
+                    <video v-else :src="'./image/works/'+work.modal_image" loop autoplay muted style="display: block;margin:auto;"></video>
                     <span class="mt-5" v-html="work.detail"></span>
                     <table class="mt-5">
                       <tr>

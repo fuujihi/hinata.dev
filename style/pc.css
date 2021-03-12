@@ -169,10 +169,11 @@ img {
   margin-top: 1vw;
 }
 
-#nav li a {
+#nav li > span {
   color: #fff;
   font-family: 'FOT-TsukuARdGothic Std R',sans-serif;
   font-size: 2vw;
+  cursor: pointer;
 }
 
 #nav li a:hover span i {
@@ -310,23 +311,6 @@ about
 
 .logo {
     width: 2vw;
-}
-
-.marker-animation.active{
-  background-position: -100% .5em;
-}
-
-.marker-animation {
-  background-image: -webkit-linear-gradient(left, transparent 50%, var(--marker) 50%);
-  background-image: -moz-linear-gradient(left, transparent 50%, var(--marker) 50%);
-  background-image: -ms-linear-gradient(left, transparent 50%, var(--marker) 50%);
-  background-image: -o-linear-gradient(left, transparent 50%, var(--marker) 50%);
-  background-image: linear-gradient(left, transparent 50%, var(--marker) 50%);
-  background-repeat: repeat-x;
-  background-size: 200% .8em;
-  background-position: 0.5em;
-  transition: background 2s;
-  font-weight: bold;
 }
 
 .career {

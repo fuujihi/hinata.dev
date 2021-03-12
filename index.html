@@ -61,29 +61,29 @@
 
       <!-- ヘッダー  -->
       <nav>
-        <ul id="nav">
+        <ul id="nav" ref="header">
           <li>
-            <a href="#about">
+            <span @click="scroll('about')">
               <span><i class="fas fa-kiwi-bird"></i></span>
               <span>about</span>
-            </a>
+            </span>
           </li>
           <li>
-            <a href="#works">
+            <span @click="scroll('works')">
               <span><i class="fas fa-crow"></i></span>
               <span>works</span>
-            </a>
+          </span>
           </li>
           <li>
-            <a href="#contact">
+            <span @click="scroll('contact')">
               <span><i class="fas fa-dove"></i></span>
               <span>contact</span>
-            </a>
+          </span>
           </li>
         </ul>
       </nav>
 
-      <div id="about" class="mb-4 mt-5">
+      <div id="about" ref="about" class="mb-4 mt-5">
         <h1>about...</h1>
         <div class="row mt-3">
           <div class="item col-lg profile-image-wap">
@@ -95,7 +95,7 @@
                   <span class="name">Hinata fujiHara</span>&ensp;
                   <span class="name-jp">- 藤原 日向葵</span>
                   <div class="mt-1">
-                    2003年9月6日生まれの<span id="age"></span>歳。N高等学校在籍。<br>
+                    2003年9月6日生まれの{{ age }}歳。N高等学校在籍。<br>
                     中学校では病気から不登校だった過去がある。<br>
                     複数の企業、団体でITエンジニアとして活動する<br>
                     主にPHPを使用するWebプログラマー。<br>
@@ -162,7 +162,7 @@
         </div>
       </div>
 
-      <div id="works" class="mb-4">
+      <div id="works" class="mb-4" ref="works">
         <h1>works</h1>
         <div class="row">
           <div class="col-md-6 col-sm-12" v-for="(work, index) in works">
@@ -223,7 +223,7 @@
           </div>
         </div>
       </div>
-      <div class="mb-5" id="contact">
+      <div class="mb-5" id="contact" ref="contact">
         <h1>contact</h1>
         <div class="align-center">
           <div>
@@ -256,11 +256,10 @@
           </div>
         </div>
       </div>
-
       <div id="thema"><i class="far fa-moon"></i></div>
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script> 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     var app = new Vue({
@@ -269,13 +268,31 @@
         skills: null,
         careers: null,
         qualifications: null,
-        works: null
+        works: null,
+        age: null,
+        scroll_offset: 0
       },
       created: function() {
         axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
         axios.get('./data/careers.json').then(function(response) { app.$data.careers = response.data.careers; });
         axios.get('./data/qualifications.json').then(function(response) { app.$data.qualifications = response.data.qualifications; });
         axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
+        this.age = this.getAge();
+      },
+      methods: {
+        getAge() {
+          const birthday = '20030906';
+          let today = new Date();
+          let tdate = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate();
+          return Math.floor((tdate - birthday) / 10000);
+        },
+        scroll(key) {
+          const header = this.$refs.header.getBoundingClientRect();
+          window.scrollTo({
+            top: this.$refs[key].offsetTop-header.height-10,
+            behavior: "smooth"
+          });
+        }
       }
     })
   </script>

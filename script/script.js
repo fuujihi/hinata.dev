@@ -1,7 +1,4 @@
 $(function () {
-    const age = getAge();
-    $('#age').text(age);
-
     // ページトップ
     let navHeight = $('#nav').outerHeight(true);
     let offset = $('#nav').offset().top;
@@ -17,16 +14,6 @@ $(function () {
             if ($('#dummy').length) $('#dummy').remove();
             offset = $('#nav').offset().top;
         }
-    });
-
-    // ヘッダースムーススクロール
-    $('a[href^="#"]').click(function () {
-        let href = $(this).attr('href');
-        let target = $(href == '#' || href === '' ? 'html' : href);
-        let position = target.offset().top - 100;
-        $('html,body').animate({
-            scrollTop: position
-        }, 500);
     });
 
     let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -56,23 +43,6 @@ $(function () {
     });
 
 });
-
-// マーカー
-$(window).scroll(function () {
-    $('.marker-animation').each(function () {
-        let position = $(this).offset().top;
-        let scroll = $(window).scrollTop();
-        let windowHeight = $(window).height();
-        if (scroll > position - windowHeight) $(this).addClass('active');
-    });
-});
-
-function getAge() {
-    const birthday = '20030906';
-    let today = new Date();
-    let tdate = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate();
-    return Math.floor((tdate - birthday) / 10000);
-}
 
 function changeThemaIcon(isDark, saveLocalStFlg=true) {
     if (isDark) $("#thema").html('<i class="fas fa-moon"></i>');

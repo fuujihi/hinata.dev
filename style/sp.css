@@ -28,12 +28,12 @@
     height: 10vw;
   }
 
-  #nav li a span {
+  #nav li span span {
     font-size: 5vw;
     font-weight: bold;
   }
 
-  #nav li a span:first-child {
+  #nav li span span:first-child {
     display: none;
   }
 
@@ -41,6 +41,10 @@
     font-size: 7vw;
     right: 25px;
     bottom: 25px;
+  }
+  
+  #dummy {
+    margin-top: 10vw!important;
   }
 
   /*---------------------------------

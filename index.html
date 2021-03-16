@@ -53,7 +53,7 @@
       <!-- トップ画像  -->
       <div class="top">
         <picture>
-          <source srcset="./image/top.webp" type='image/webp'>
+          <source srcset="./image/top.webp" type='image/webp' width="auto" height="auto">
           <img src="./image/top.jpg" alt="top" width="auto" height="auto">
         </picture>
         <div class="rectangle">
@@ -175,7 +175,7 @@
             <span data-toggle="modal" :data-target="'#work-'+index">
               <div class="card">
                 <picture>
-                  <source :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>
+                  <source :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp' width="auto" height="auto">
                   <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="auto" height="auto">
                 </picture>
                 <div class="card-body">

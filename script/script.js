@@ -1,24 +1,4 @@
 $(function () {
-    // ページトップ
-    let navHeight = $('#nav').outerHeight(true);
-    let offset = $('#nav').offset().top;
-    $(window).resize(function() {
-        offset = $('#nav').offset().top;
-    }, false );
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > offset) {
-            $('#nav').addClass('fixedNav');
-            if (!$('#dummy').length) $('body').prepend('<div id="dummy" style="margin-top:5vw"></div>')
-        } else {
-            $('#nav').removeClass('fixedNav');
-            if ($('#dummy').length) {
-                window.scrollTo(0, $('#nav').offset().top);
-                $('#dummy').remove();
-            }
-            offset = $('#nav').offset().top;
-        }
-    });
-
     let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     let isDarkOS = window.matchMedia('(prefers-color-scheme: dark)');
 

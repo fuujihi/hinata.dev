@@ -52,7 +52,10 @@
     <div id="wrapper" v-cloak>
       <!-- トップ画像  -->
       <div class="top">
-        <img src="./image/top.jpg" alt="top" width="auto" height="auto">
+        <picture>
+          <source srcset="./image/top.webp" type='image/webp'>
+          <img src="./image/top.jpg" alt="top" width="auto" height="auto">
+        </picture>
         <div class="rectangle">
           <span>HINATA FUJIHARA</span>
           <span>’s portfolio</span>

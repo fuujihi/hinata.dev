@@ -533,10 +533,13 @@ contact
   width: 45%;
 }
 
+#contact a {
+  margin-bottom: 10px;
+}
+
 #contact div {
   font-size: 2.8vw;
   text-align: left;
-  margin-bottom: 10px;
 }
 
 #contact .logo {

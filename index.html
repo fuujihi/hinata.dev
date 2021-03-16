@@ -52,7 +52,7 @@
     <div id="wrapper" v-cloak>
       <!-- トップ画像  -->
       <div class="top">
-        <img src="./image/top.jpg" alt="top">
+        <img src="./image/top.jpg" alt="top" width="auto" height="auto">
         <div class="rectangle">
           <span>HINATA FUJIHARA</span>
           <span>’s portfolio</span>
@@ -88,7 +88,7 @@
         <div class="row mt-3">
           <div class="item col-lg profile-image-wap">
             <!-- <img src="./image/profile.jpg" alt="profile" class="profile-img"> -->
-            <img src="./image/top_2.JPG" alt="profile" class="profile-img">
+            <img src="./image/top_2.JPG" alt="profile" class="profile-img" width="auto" height="auto">
           </div>
           <div class="profile col-lg">
               <div class="profile-wrap">
@@ -107,7 +107,7 @@
                     <a target="_blank" rel="noopener" href="https://www.facebook.com/hinatao3o" aria-label="Facebookリンク"><i class="fab fa-facebook"></i></a>
                     <a target="_blank" rel="noopener" href="https://www.messenger.com/t/hinatao3o" aria-label="Messengerリンク"><i class="fab fa-facebook-messenger"></i></a>
                     <a target="_blank" rel="noopener" href="https://twitter.com/hinatao3o" aria-label="twitterリンク"><i class="fab fa-twitter"></i></a>
-                    <a target="_blank" rel="noopener" href="https://qiita.com/hinatao3o" aria-label="Qiitaリンク"><img class="qiita-logo" src="./image/qiita.png" alt="qiita"></a>
+                    <a target="_blank" rel="noopener" href="https://qiita.com/hinatao3o" aria-label="Qiitaリンク"><img class="qiita-logo" src="./image/qiita.png" alt="qiita" width="auto" height="auto"></a>
                   </span>
               </div>
           </div>
@@ -169,7 +169,7 @@
           <div class="col-md-6 col-sm-12" v-for="(work, index) in works">
             <span data-toggle="modal" :data-target="'#work-'+index">
               <div class="card">
-                <img class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title">
+                <img class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title" width="auto" height="auto">
                 <div class="card-body">
                   <div class="card-title">{{ work.title }}</div>
                 </div>
@@ -188,7 +188,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img v-if="typeof(work.modal_image) == 'undefined'" class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title">
+                    <img v-if="typeof(work.modal_image) == 'undefined'" class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title" width="auto" height="auto">
                     <video v-else :src="'./image/works/'+work.modal_image" loop autoplay muted style="display: block;margin:auto;"></video>
                     <span class="mt-5" v-html="work.detail"></span>
                     <table class="mt-5">

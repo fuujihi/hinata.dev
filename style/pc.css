@@ -439,6 +439,10 @@ works
   margin-bottom: 0;
 }
 
+.card-img-top {
+  height: auto;
+}
+
 .tags {
   padding: 1.25rem 1rem;
 }

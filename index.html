@@ -139,7 +139,8 @@
                 </div>
                 <span class="period">{{ career.start }} - {{ career.end }} </span>
                 <span class="summary">
-                  <a target="_blank" rel="noopener" :href="career.url">{{ career.name }} </a>
+                  <a v-if="career.url" target="_blank" rel="noopener" :href="career.url">{{ career.name }} </a>
+                  <span v-else>{{ career.name }}</span>
                   <span v-if="career.employment_status">{{ career.employment_status }} </span>
                 </span>
                 <span class="tooltip" v-if="career.tooltip">

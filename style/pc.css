@@ -48,6 +48,13 @@
   font-family: 'FOT-TsukuARdGothic Std R', 'ヒラギノ丸ゴ ProN', sans-serif;
   color: var(--main-text);
   transition: .3s;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display:none;
 }
 
 body {

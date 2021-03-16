@@ -166,7 +166,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0!important;
-  z-index: 999999;
+  z-index: 99999;
 }
 
 #nav {
@@ -212,6 +212,7 @@ nav {
   right: 50px;
   bottom: 50px;
   cursor: pointer;
+  z-index: 999999;
 }
 #thema i {
   transition: .6s;

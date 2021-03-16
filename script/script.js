@@ -11,7 +11,10 @@ $(function () {
             if (!$('#dummy').length) $('body').prepend('<div id="dummy" style="margin-top:5vw"></div>')
         } else {
             $('#nav').removeClass('fixedNav');
-            if ($('#dummy').length) $('#dummy').remove();
+            if ($('#dummy').length) {
+                window.scrollTo(0, $('#nav').offset().top);
+                $('#dummy').remove();
+            }
             offset = $('#nav').offset().top;
         }
     });

@@ -134,6 +134,7 @@ img {
   font-size: 3vw;
   color: var(--main-text);
   vertical-align: baseline;
+  overflow: hidden;
 }
 
 .rectangle :first-child {
@@ -183,7 +184,11 @@ img {
   cursor: pointer;
 }
 
-#nav li a:hover span i {
+#nav li span i {
+  vertical-align: middle;
+}
+
+#nav li span:hover span i {
   display: inline-block;
   animation: yureru .7s infinite;
 }

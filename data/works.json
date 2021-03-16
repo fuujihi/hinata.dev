@@ -2,7 +2,7 @@
     "works": [
         {
     		"title": "インターン求人サイト careerbaito.com",
-            "thumbnail": "careerbaito.jpg",
+            "thumbnail": "careerbaito",
     		"detail": "エン・ジャパン株式会社でのインターンで開発に参加。<br>主にバックエンドを担当。<br>機能開発・運用やバグ修正など細かい作業から、UX向上のための変更なども行う。<br>企業/社内向けCMSの機能開発や、AWSのEC2インスタンスなどのインフラ構築にも携わる。",
             "languages": [
                 "PHP(CakePHP) ",
@@ -28,7 +28,7 @@
     	},
         {
             "title": "東京都新型コロナウイルス感染症対策サイト",
-            "thumbnail": "covid-19.png",
+            "thumbnail": "covid19",
             "detail": "Vue.jsを用いたトップページの改修に携わる。<br>また、非公開のリポジトリにて東京都の管理するExcelなどのデータからオープンデータを生成するPHPスクリプトの開発を行う。",
             "languages": [
                 "PHP",
@@ -48,7 +48,7 @@
         },
         {
             "title": "Entwickeln Zukunft 公式Webサイト",
-            "thumbnail": "entwickeln.jpg",
+            "thumbnail": "entwickeln",
             "detail": "デザイン改修、レスポンシブ対応を担当。<br>Figmaからコーディングを行なった。",
             "languages": [
                 "JS(jQuery)",
@@ -70,7 +70,7 @@
         },
         {
             "title": "CoderDojo Kashiwa 公式Webサイト",
-            "thumbnail": "CoderDojoKashiwa.jpg",
+            "thumbnail": "coderdojo_kashiwa",
             "detail": "主にバックエンドを担当。<br>初めて本格的にコードを書いたプロジェクト。<br>PHPやMySQLの基礎をこのサイトを作りながら学んだ。<br>ログイン周りの実装はフロントエンドも携わっている。",
             "languages": [
                 "PHP",
@@ -91,7 +91,7 @@
         },
         {
             "title": "サス・ゲー 管理システム",
-            "thumbnail": "susgame.jpg",
+            "thumbnail": "susgame",
             "detail": "小中学生向けWS、サス・ゲーのゲームを管理するシステム。<br>株式会社 Innovation Power からの業務委託として開発。<br>Minecraftのサーバー、プレイヤーなどをシームレスに管理できるようにしている。",
             "languages": [
                 "PHP",
@@ -112,7 +112,7 @@
         },
         {
             "title": "HINATA FUJIHARA’s portfolio",
-            "thumbnail": "portfolio.jpg",
+            "thumbnail": "portfolio",
             "detail": "このWebサイト。<br>時間のある時に少しずつ作って2020/06に完成。<br>デザインは素人なのでXDを使ってプロトタイプを作成した。<br>また、今後はVue.jsへの移行を検討中。",
             "languages": [
                 "JS(jQuery)",
@@ -135,7 +135,7 @@
         },
         {
             "title": "ランチ提案Slack Bot",
-            "thumbnail": "ランチ提案SlackBot.jpg",
+            "thumbnail": "slack_bot",
             "detail": "趣味として作ったSlack Bot。<br>Pythonを書いたことがなかったので試しに書いてみたもの。<br>ぐるなびのAPIを使用して新宿御苑周辺（オフィス周辺）の飲食店を探してくれる。<br>フリーワード検索にも対応。",
             "languages": [
                 "Python"
@@ -153,7 +153,7 @@
         },
         {
             "title": "Ruby(Rails)で非同期いいね",
-            "thumbnail": "like.jpg",
+            "thumbnail": "like",
             "modal_image": "like.webm",
             "detail": "Rubyを触ったことがなかったので作ってみたもの。<br>Railsを使用して、非同期でいいね機能を実装。<br>他ユーザーからのいいねがある場合にマッチングする機能もある。<br>DB構造から作ってある。",
             "languages": [

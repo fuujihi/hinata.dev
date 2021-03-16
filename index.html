@@ -174,7 +174,10 @@
           <div class="col-md-6 col-sm-12" v-for="(work, index) in works">
             <span data-toggle="modal" :data-target="'#work-'+index">
               <div class="card">
-                <img class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title" width="auto" height="auto">
+                <picture>
+                  <source :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>
+                  <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="auto" height="auto">
+                </picture>
                 <div class="card-body">
                   <div class="card-title">{{ work.title }}</div>
                 </div>
@@ -193,7 +196,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <img v-if="typeof(work.modal_image) == 'undefined'" class="card-img-top" :src="'./image/works/'+work.thumbnail" :alt="work.title" width="auto" height="auto">
+                    <img v-if="typeof(work.modal_image) == 'undefined'" class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="auto" height="auto">
                     <video v-else :src="'./image/works/'+work.modal_image" loop autoplay muted style="display: block;margin:auto;"></video>
                     <span class="mt-5" v-html="work.detail"></span>
                     <table class="mt-5">

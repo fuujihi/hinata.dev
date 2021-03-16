@@ -48,8 +48,6 @@
   font-family: 'FOT-TsukuARdGothic Std R', 'ヒラギノ丸ゴ ProN', sans-serif;
   color: var(--main-text);
   transition: .3s;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
@@ -60,6 +58,8 @@
 body {
   background-color: var(--main-bg);
   overflow: visible;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
 }
 
 [v-cloak] {

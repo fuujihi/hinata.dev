@@ -441,7 +441,7 @@ works
 }
 
 .card-img-top {
-  height: auto;
+  height: 100%;
 }
 
 .tags {

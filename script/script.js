@@ -1,4 +1,4 @@
-$(function () {
+(function () {
     let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     let isDarkOS = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -18,18 +18,17 @@ $(function () {
         changeThemaIcon(isDark)
     }
 
-    $('#thema').click(function () {
+    document.getElementById('thema').addEventListener('click',function(){
         if (isDark) document.documentElement.setAttribute('theme', 'light');
         else document.documentElement.setAttribute('theme', 'dark');
         isDark = !isDark;
         changeThemaIcon(isDark);
     });
-
-});
+}());
 
 function changeThemaIcon(isDark, saveLocalStFlg=true) {
-    if (isDark) $("#thema").html('<i class="fas fa-moon"></i>');
-    else $("#thema").html('<i class="far fa-moon"></i>');
+    if (isDark) document.getElementById('thema').innerHTML = '<i class="fas fa-moon"></i>';
+    else document.getElementById('thema').innerHTML = '<i class="far fa-moon"></i>';
     if (saveLocalStFlg) {
         localStorage.theme = isDark ? 'dark' : 'light';
     }

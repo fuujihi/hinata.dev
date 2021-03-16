@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="./style/sp.css">
     <link rel="icon" href="./image/favicon.ico">
     <script async src="//kit.fontawesome.com/64398ca154.js"></script>
-    <script src="./script/jquery.min.js" defer></script>
-    <script src="./script/bootstrap.min.js" defer></script>
     <script src="./script/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172318672-1"></script>
     <script>
@@ -172,7 +171,7 @@
         <h1>works</h1>
         <div class="row">
           <div class="col-md-6 col-sm-12" v-for="(work, index) in works">
-            <span data-toggle="modal" :data-target="'#work-'+index">
+            <span data-bs-toggle="modal" :data-bs-target="'#work-'+index">
               <div class="card">
                 <picture>
                   <source :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>

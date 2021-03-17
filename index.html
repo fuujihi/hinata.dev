@@ -286,11 +286,11 @@
         scroll_offset: 0
       },
       created: function() {
+        this.age = this.getAge();
         axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
         axios.get('./data/careers.json').then(function(response) { app.$data.careers = response.data.careers; });
         axios.get('./data/qualifications.json').then(function(response) { app.$data.qualifications = response.data.qualifications; });
         axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
-        this.age = this.getAge();
       },
       methods: {
         getAge() {

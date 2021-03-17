@@ -174,7 +174,7 @@
             <span data-bs-toggle="modal" :data-bs-target="'#work-'+index">
               <div class="card">
                 <picture>
-                  <source :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>
+                  <source class="card-img-top" :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>
                   <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="100%" height="auto">
                 </picture>
                 <div class="card-body">

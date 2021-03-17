@@ -175,7 +175,7 @@
               <div class="card">
                 <picture>
                   <source class="card-img-top" :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>
-                  <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="100%" height="auto">
+                  <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="100%" height="100%" intrinsicsize="1000x617">
                 </picture>
                 <div class="card-body">
                   <div class="card-title">{{ work.title }}</div>
@@ -197,7 +197,7 @@
                   <div class="modal-body">
                     <picture v-if="typeof(work.modal_image) == 'undefined'">
                       <source class="card-img-top" :srcset="'./image/works/'+work.thumbnail+'.webp'" type='image/webp'>
-                      <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="100%" height="auto">
+                      <img class="card-img-top" :src="'./image/works/'+work.thumbnail+'.jpg'" :alt="work.title" width="100%" height="100%" intrinsicsize="1000x617">
                     </picture>
                     <video v-else :src="'./image/works/'+work.modal_image" loop autoplay muted style="display: block;margin:auto;"></video>
                     <span class="mt-5" v-html="work.detail"></span>

@@ -4,7 +4,7 @@
 
 ---------------------------------*/
 :root {
-  --main-text: #595959;
+  --main-text: #585858;
   --content-bg: #fff;
   --qiita-bg: rgba(#fff, 0);
   --main-bg: #fff;
@@ -24,7 +24,7 @@
 }
 
 :root[theme="light"] {
-  --main-text: #595959;
+  --main-text: #585858;
   --content-bg: #fff;
   --qiita-bg: rgba(#fff, 0);
   --main-bg: #fff;
@@ -392,10 +392,10 @@ about
   -webkit-border-radius: 5px;
   border-radius: 5px;
 
-  -moz-box-shadow: 0 0 8px 0 #595959;
-  -webkit-box-shadow: 0 0 8px 0 #595959;
-  filter: progid:DXImageTransform.Microsoft.Shadow(color='#595959', Direction=135, Strength=3);
-  box-shadow: 0 0 8px 0 #595959;
+  -moz-box-shadow: 0 0 8px 0 #585858;
+  -webkit-box-shadow: 0 0 8px 0 #585858;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#585858', Direction=135, Strength=3);
+  box-shadow: 0 0 8px 0 #585858;
 
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;

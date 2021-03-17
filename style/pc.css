@@ -52,7 +52,7 @@
 }
 
 *::-webkit-scrollbar {
-    display:none;
+  display:none;
 }
 
 body {
@@ -270,11 +270,11 @@ about
 }
 
 .sns i {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .fa-github:hover {
-    color: #24292e;
+  color: #24292e;
 }
 
 .qiita-logo {
@@ -302,7 +302,7 @@ about
 }
 
 .skills .lang {
-    margin-right: 1vw;
+  margin-right: 1vw;
 }
 
 .skills i {
@@ -328,12 +328,12 @@ about
 }
 
 .lang {
-    width: 5vw;
-    vertical-align: middle;
+  width: 5vw;
+  vertical-align: middle;
 }
 
 .logo {
-    width: 2vw;
+  width: 2vw;
 }
 
 .career {
@@ -351,7 +351,7 @@ about
 }
 
 .career div div {
-    margin-right: 2vw;
+  margin-right: 2vw;
 }
 
 .career div div i {
@@ -450,7 +450,7 @@ works
 }
 
 .modal-title {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .card-body {
@@ -486,7 +486,7 @@ works
 }
 
 .modal-content {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .modal-dialog {
@@ -511,7 +511,7 @@ table th, table td{
 }
 
 .modal-header {
-    background-color: var(--content-bg);
+  background-color: var(--content-bg);
 }
 
 .modal-body {

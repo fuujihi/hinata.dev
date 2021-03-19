@@ -99,7 +99,8 @@
   }
 
   .profile {
-      padding: 0 13%;
+    padding-left: 13%;
+    padding-right: 0!important;
   }
 
   .profile div {
@@ -173,7 +174,8 @@
   }
 
   .career div div {
-      width: 7vw;
+    width: 7vw;
+    height: 7vw;
   }
 
   .career div div i {
@@ -202,7 +204,7 @@
 
   ---------------------------------*/
   #works > div {
-      margin: 0 7vw 0 7vw;
+    margin: 0 7vw 0 7vw;
   }
 
   .card {

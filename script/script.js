@@ -15,7 +15,7 @@
         isDark = localStorage.theme == 'dark' ? true : false;
         changeThemaIcon(isDark, false);
     } else {
-        changeThemaIcon(isDark)
+        changeThemaIcon(isDark);
     }
 
     document.getElementById('thema').addEventListener('click',function(){
@@ -29,7 +29,5 @@
 function changeThemaIcon(isDark, saveLocalStFlg=true) {
     if (isDark) document.getElementById('thema').innerHTML = '<i class="fas fa-moon"></i>';
     else document.getElementById('thema').innerHTML = '<i class="far fa-moon"></i>';
-    if (saveLocalStFlg) {
-        localStorage.theme = isDark ? 'dark' : 'light';
-    }
+    if (saveLocalStFlg) localStorage.theme = isDark ? 'dark' : 'light';
 }

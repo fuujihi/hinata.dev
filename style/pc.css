@@ -9,7 +9,6 @@
   --qiita-bg: rgba(#fff, 0);
   --main-bg: #fff;
   --shadow: #d7d3d3;
-  --marker: #e7e7e7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +18,6 @@
     --qiita-bg: #bababa;
     --main-bg: #2d2d2d;
     --shadow: #868686;
-    --marker: #fff;
   }
 }
 
@@ -29,7 +27,6 @@
   --qiita-bg: rgba(#fff, 0);
   --main-bg: #fff;
   --shadow: #d7d3d3;
-  --marker: #e7e7e7;
 }
 
 :root[theme="dark"] {
@@ -38,9 +35,7 @@
   --qiita-bg: #bababa;
   --main-bg: #2d2d2d;
   --shadow: #868686;
-  --marker: #fff;
 }
-
 
 * {
   margin: 0px;
@@ -214,7 +209,7 @@ nav {
   right: 50px;
   bottom: 50px;
   cursor: pointer;
-  z-index: 999999;
+  z-index: 1000;
 }
 #thema i {
   transition: .6s;

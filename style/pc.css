@@ -626,6 +626,8 @@ contact
 
 .share span {
   vertical-align: middle;
+  font-size: 1.8vw;
+  color: var(--main-text);
 }
 
 .share a {
@@ -643,9 +645,9 @@ contact
   filter: brightness(50%);
 }
 
-.share i {
+.share a i {
   color: #fff;
-  font-size: 2vw;
+  font-size: 1.8vw;
 }
 
 .share a:hover i {

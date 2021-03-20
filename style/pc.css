@@ -9,6 +9,9 @@
   --qiita-bg: rgba(#fff, 0);
   --main-bg: #fff;
   --shadow: #d7d3d3;
+  --facebook: #3B5998;
+  --twitter: #00acee;
+  --line: #06c755;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,7 +94,7 @@ h2 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 .sns, .star, .card-body, .top, img, #nav {
@@ -575,7 +578,7 @@ contact
 .facebook:hover i,
 .facebook:hover span,
 .fa-facebook:hover {
-  color: #3B5998;
+  color: var(--facebook);
 }
 
 .messenger:hover i,
@@ -587,7 +590,7 @@ contact
 .twitter:hover i,
 .twitter:hover span,
 .fa-twitter:hover {
-  color: #00acee;
+  color: var(--twitter);
 }
 
 .align-center div a {
@@ -609,4 +612,54 @@ contact
 #contact div div a {
   white-space: nowrap;
   display: block;
+}
+
+.share {
+  width: 100%;
+  padding-right: 9vw;
+  text-align: right;
+}
+
+.share span {
+  vertical-align: middle;
+}
+
+.share a {
+  color: #fff;
+  padding: .5rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.share a:hover {
+  filter: brightness(50%);
+}
+
+.share i {
+  color: #fff;
+  font-size: 2vw;
+}
+
+.share a:hover i {
+  color: #fff!important;
+}
+
+.share .facebook {
+  background-color: var(--facebook);
+}
+
+.share .twitter {
+  background-color: var(--twitter);
+}
+
+.share .line {
+  background-color: var(--line);
+}
+
+.share .fa-share-alt {
+  margin: .5rem;
 }

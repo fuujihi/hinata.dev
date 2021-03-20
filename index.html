@@ -219,12 +219,12 @@
                         <th>リンク</th>
                         <td colspan="3">
                             <a v-if="work.url_href" target="_blank" rel="noopener" :href="work.url_href">{{ work.url_text }}</a>
-                            <a v-if="!work.url_href && work.github" target="_blank" rel="noopener" :href="work.github">GitHub <i class="fab fa-github"></i></a>
+                            <a v-if="!work.url_href && work.github" class="github-link" target="_blank" rel="noopener" :href="work.github">GitHub <i class="fab fa-github"></i></a>
                         </td>
                       </tr>
                       <tr v-if="work.url_href && work.github">
                           <th></th>
-                          <td colspan="3"><a target="_blank" rel="noopener" :href="work.github">GitHub <i class="fab fa-github"></i></a></td>
+                          <td colspan="3"><a class="github-link" target="_blank" rel="noopener" :href="work.github">GitHub <i class="fab fa-github"></i></a></td>
                       </tr>
                     </table>
                   </div>

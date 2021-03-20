@@ -284,6 +284,10 @@ about
   color: #24292e;
 }
 
+.github-link:hover i {
+  color: #24292e;
+}
+
 .qiita-logo {
   width: auto;
   height: 3vw;
@@ -611,7 +615,7 @@ contact
 
 #contact div div a {
   white-space: nowrap;
-  display: block;
+  display: inline-block;
 }
 
 .share {

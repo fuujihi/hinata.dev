@@ -632,13 +632,14 @@ contact
 
 .share a {
   color: #fff;
-  padding: .5rem;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   margin-left: 5px;
-  vertical-align: middle;
+  text-align: center;
   display: inline-block;
+  height: 3vw;
+  width: 3vw;
 }
 
 .share a:hover {
@@ -647,7 +648,9 @@ contact
 
 .share a i {
   color: #fff;
-  font-size: 1.8vw;
+  font-size: 2vw;
+  line-height: 3vw;
+  vertical-align: middle;
 }
 
 .share a:hover i {

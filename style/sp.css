@@ -278,12 +278,12 @@
   }
 
   .share a {
-    height: 20%;
-    width:  20%;
-    vertical-align:middle;
+    height: 7vw;
+    width:  20vw;
   }
 
   .share i {
+    line-height: 7vw!important;
     font-size: 4vw!important;
   }
 }

@@ -159,7 +159,7 @@
           <div class="row items">
             <div class="item skills mb-3" v-for="qualification in qualifications">
               <div class="lang"><i :class="[qualification.class_prefix, qualification.class]"></i></div>
-              <span>{{ qualification.year_month }} {{ qualification.status }}</span>
+              <span>{{ qualification.year_month }} {{ qualification.year_month ? "取得" : "取得に向け勉強中" }}</span>
               <span class="summary">{{ qualification.name }}</span>
             </div>
           </div>

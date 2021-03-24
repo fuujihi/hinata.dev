@@ -4,20 +4,18 @@
     		"class_prefix": "fas",
     		"class": "fa-calculator",
             "year_month": "2015/05",
-    		"status": "取得",
     		"name": "珠算技能検定2級"
     	},
         {
     		"class_prefix": "fas",
     		"class": "fa-motorcycle",
             "year_month": "2020/10",
-    		"status": "取得",
     		"name": "普通自動二輪車免許"
     	},
         {
     		"class_prefix": "fas",
     		"class": "fa-pen",
-            "year_month": "2021/03",
+            "year_month": null,
     		"status": "取得に向け勉強中",
     		"name": "基本情報技術者試験"
     	}

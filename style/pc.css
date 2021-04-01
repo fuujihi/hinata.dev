@@ -638,12 +638,12 @@ footer
 #thema {
   font-size: 3vw;
   display: table-cell;
-  cursor: pointer;
   z-index: 1000;
 }
 #thema i {
   transition: .6s;
-  color: var(--main-text)
+  color: var(--main-text);
+  cursor: pointer;
 }
 #thema .fas {
   color: #ffd24a!important;

@@ -55,11 +55,11 @@
             "tooltip": "<a target=\"_blank\" rel=\"noopener\" href=\"https://careerbaito.com\">キャリアバイト</a>の開発・運用に携わる"
         },
         {
-            "name": "東京都戦略政策情報推進本部",
+            "name": "東京都 デジタルサービス局",
             "type": "employment",
             "start": "2021/01",
             "end": "現在",
-            "url": "https://www.senryaku.metro.tokyo.lg.jp/",
+            "url": "https://www.digitalservice.metro.tokyo.lg.jp/",
             "employment_status": "会計年度任用職員",
             "tooltip": "主に<a target=\"_blank\" rel=\"noopener\" href=\"https://stopcovid19.metro.tokyo.lg.jp/\">感染症対策サイト</a>開発に携わる"
         }

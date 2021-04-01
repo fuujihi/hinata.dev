@@ -68,6 +68,27 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
 #wrapper {
   width: 100%;
   height: 100%;
@@ -206,22 +227,6 @@ nav {
   display: inline-block;
 }
 
-#thema {
-  font-size: 3vw;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  cursor: pointer;
-  z-index: 1000;
-}
-#thema i {
-  transition: .6s;
-  color: var(--main-text)
-}
-#thema .fas {
-  color: #ffd24a!important;
-}
-
 @keyframes yureru {
   0% {transform: rotate(0deg);}
   50% {transform: rotate(20deg);}
@@ -322,15 +327,11 @@ about
 
 .skills span {
   font-size: 1.8vw;
+  vertical-align: middle;
 }
 
 .star {
   margin-right: 2vw;
-}
-
-.skills .summary {
-  vertical-align: middle;
-
 }
 
 .lang, .logo {
@@ -552,6 +553,7 @@ contact
 #contact {
   font-size: 3.5vw;
   margin-top: 7vw;
+  margin-bottom: 5rem;
 }
 
 #contact .align-center {
@@ -618,10 +620,40 @@ contact
   display: inline-block;
 }
 
+
+/*---------------------------------
+
+footer
+
+---------------------------------*/
+
+.footer {
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+  z-index: 1000;
+  display: table;
+}
+
+#thema {
+  font-size: 3vw;
+  display: table-cell;
+  cursor: pointer;
+  z-index: 1000;
+}
+#thema i {
+  transition: .6s;
+  color: var(--main-text)
+}
+#thema .fas {
+  color: #ffd24a!important;
+}
+
 .share {
-  width: 100%;
-  padding-right: 9vw;
+  padding-right: 30px;
   text-align: right;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .share span {

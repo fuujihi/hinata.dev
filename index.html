@@ -234,7 +234,7 @@
           </div>
         </div>
       </div>
-      <div class="mb-5" id="contact" ref="contact">
+      <div id="contact" ref="contact">
         <h1>contact</h1>
         <div class="align-center">
           <div>
@@ -268,21 +268,22 @@
         </div>
       </div>
 
-      <div class="share mb-5">
-        <span><i class="fa-fw fas fa-share-alt"></i></span>
-        <a class="facebook" target="_blank" rel="noopener" aria-label="share Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hinata.dev"><i class="fab fa-facebook-f"></i></a>
-        <a class="twitter" target="_blank" rel="noopener" aria-label="share Twitter" href="https://twitter.com/share?url=http://hinata.dev"><i class="fab fa-twitter"></i></a>
-        <a class="line" target="_blank" rel="noopener" aria-label="share Line" href="http://line.me/R/msg/text/?http://hinata.dev"><i class="fab fa-line"></i></a>
-      </div>
-
-      <div id="thema"><i class="far fa-moon"></i></div>
+      <transition name="slide-fade">
+        <div class="footer" v-show="show">
+          <div class="share">
+            <span><i class="fa-fw fas fa-share-alt"></i></span>
+            <a class="facebook" target="_blank" rel="noopener" aria-label="share Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hinata.dev"><i class="fab fa-facebook-f"></i></a>
+            <a class="twitter" target="_blank" rel="noopener" aria-label="share Twitter" href="https://twitter.com/share?url=http://hinata.dev"><i class="fab fa-twitter"></i></a>
+            <a class="line" target="_blank" rel="noopener" aria-label="share Line" href="http://line.me/R/msg/text/?http://hinata.dev"><i class="fab fa-line"></i></a>
+          </div>
+          <div id="thema"><i class="far fa-moon"></i></div>
+        </div>
+      </transition>
     </div>
   </body>
-  <script async src="./script/script.js"></script>
-  <script src="./script/vue.min.js"></script> 
+  <script src="./script/vue.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
-    console.log('%c👋\nご覧いただきありがとうございます!','padding:3px;font-size:20px;');
     var app = new Vue({
       el: '#wrapper',
       data: {
@@ -291,16 +292,49 @@
         qualifications: [],
         works: [],
         age: null,
+        show: false
       },
-      created: function() {
+      created: function () {
+        console.log('%c👋\nご覧いただきありがとうございます!','padding:3px;font-size:20px;');
         this.age = this.getAge();
         axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
         axios.get('./data/careers.json').then(function(response) { app.$data.careers = response.data.careers; });
         axios.get('./data/qualifications.json').then(function(response) { app.$data.qualifications = response.data.qualifications; });
         axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
       },
-      mounted: function() {
-        document.getElementById('wrapper').animate([{opacity: 0}, {opacity: 1}], 1000);
+      mounted: function () {
+        this.$nextTick(function () {
+          document.getElementById('wrapper').animate([{opacity: 0}, {opacity: 1}], 1000);
+          window.addEventListener('scroll', () => {
+            this.show = (window.scrollY > 150);
+          });
+
+          let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          let isDarkOS = window.matchMedia('(prefers-color-scheme: dark)');
+
+          const changeThema = function(isDarkOS) {
+            if (isDarkOS.matches) document.documentElement.setAttribute('theme', 'dark');
+            else document.documentElement.setAttribute('theme', 'light');
+            isDark = isDarkOS.matches;
+            this.changeThemaIcon(isDark);
+          }
+          isDarkOS.addListener(changeThema);
+
+          if (localStorage.theme) {
+            document.documentElement.setAttribute('theme', localStorage.theme);
+            isDark = localStorage.theme == 'dark' ? true : false;
+            this.changeThemaIcon(isDark, false);
+          } else {
+            this.changeThemaIcon(isDark);
+          }
+
+          document.getElementById('thema').addEventListener('click',function(){
+            if (isDark) document.documentElement.setAttribute('theme', 'light');
+            else document.documentElement.setAttribute('theme', 'dark');
+            isDark = !isDark;
+            this.changeThemaIcon(isDark);
+          });
+        })
       },
       methods: {
         getAge() {
@@ -315,6 +349,12 @@
             top: this.$refs[key].offsetTop-header.height-10,
             behavior: "smooth"
           });
+        },
+        changeThemaIcon(isDark, saveLocalStFlg=true) {
+          if (isDark) document.getElementById('thema').innerHTML = '<i class="fas fa-moon"></i>';
+          else document.getElementById('thema').innerHTML = '<i class="far fa-moon"></i>';
+          if (saveLocalStFlg) localStorage.theme = isDark ? 'dark' : 'light';
+          return true;
         }
       }
     })

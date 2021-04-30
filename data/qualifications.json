@@ -11,13 +11,6 @@
     		"class": "fa-motorcycle",
             "year_month": "2020/10",
     		"name": "普通自動二輪車免許"
-    	},
-        {
-    		"class_prefix": "fas",
-    		"class": "fa-pen",
-            "year_month": null,
-    		"status": "取得に向け勉強中",
-    		"name": "基本情報技術者試験"
     	}
     ]
 }

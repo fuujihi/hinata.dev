@@ -62,6 +62,15 @@
             "url": "https://www.digitalservice.metro.tokyo.lg.jp/",
             "employment_status": "会計年度任用職員",
             "tooltip": "主に<a target=\"_blank\" rel=\"noopener\" href=\"https://stopcovid19.metro.tokyo.lg.jp/\">感染症対策サイト</a>開発に携わる"
+        },
+        {
+            "name": "株式会社 ディー・エヌ・エー",
+            "type": "employment",
+            "start": "2022/04",
+            "end": "(予定)",
+            "url": "https://dena.com/jp/",
+            "employment_status": null,
+            "tooltip": "ソフトウェアエンジニアとして入社予定"
         }
     ]
 }

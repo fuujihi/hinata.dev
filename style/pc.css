@@ -599,6 +599,10 @@ contact
   color: var(--twitter);
 }
 
+.fa-sticky-note:hover {
+  color: #41b059;
+}
+
 .align-center div a {
   text-decoration: none;
 }

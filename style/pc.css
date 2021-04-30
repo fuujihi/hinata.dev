@@ -469,10 +469,6 @@ works
   border-top: 1px solid rgba(0,0,0,.125);
 }
 
-.card-img-top {
-  height: 100%;
-}
-
 .card-title {
   font-size: 1.6vw;
   margin-bottom: 0;

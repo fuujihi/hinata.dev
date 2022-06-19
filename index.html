@@ -61,7 +61,7 @@
       </div>
 
       <!-- ヘッダー  -->
-      <nav>
+      <!-- <nav>
         <ul id="nav" ref="header">
           <li>
             <span @click="scroll('about')">
@@ -82,7 +82,7 @@
           </span>
           </li>
         </ul>
-      </nav>
+      </nav> -->
 
       <div id="about" ref="about" class="mb-4 mt-5">
         <h1>about...</h1>
@@ -99,7 +99,6 @@
                   <span class="name-jp mt-2 ml-2">- 藤原 日向葵</span>
                   <div class="mt-1">
                     2003年生まれの{{ age }}歳。<br>
-                    中学校では病気から不登校だった過去がある。<br>
                     N高等学校卒業、DeNAへ就職。<br>
                     趣味・特技はルービックキューブ、手品。<br>
                     Apple製品が好き<i class="fab fa-apple"></i>
@@ -114,7 +113,7 @@
               </div>
           </div>
         </div>
-        <h2>skill</h2>
+        <!-- <h2>skill</h2>
         <div class="align-center">
           <div class="row items">
               <div class="item skills mb-3" v-for="skill in skills">
@@ -162,10 +161,10 @@
               <span class="summary">{{ qualification.name }}</span>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
-      <div id="works" class="mb-4" ref="works">
+      <!-- <div id="works" class="mb-4" ref="works">
         <h1>works</h1>
         <div class="row">
           <div class="col-md-6 col-sm-12" v-for="(work, index) in works">
@@ -232,7 +231,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div id="contact" ref="contact">
         <h1>contact</h1>
         <div class="align-center">
@@ -297,10 +296,10 @@
       created: function () {
         console.log('%c👋\nご覧いただきありがとうございます!','padding:3px;font-size:20px;');
         this.age = this.getAge();
-        axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
-        axios.get('./data/careers.json').then(function(response) { app.$data.careers = response.data.careers; });
-        axios.get('./data/qualifications.json').then(function(response) { app.$data.qualifications = response.data.qualifications; });
-        axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
+        // axios.get('./data/skills.json').then(function(response) { app.$data.skills = response.data.skills; });
+        // axios.get('./data/careers.json').then(function(response) { app.$data.careers = response.data.careers; });
+        // axios.get('./data/qualifications.json').then(function(response) { app.$data.qualifications = response.data.qualifications; });
+        // axios.get('./data/works.json').then(function(response) { app.$data.works = response.data.works; });
       },
       mounted: function () {
         this.$nextTick(function () {

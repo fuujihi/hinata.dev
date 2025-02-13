@@ -15,8 +15,8 @@
   }
 
   .col-sm-12 {
-    flex: 0 0 100%!important;
-    max-width: 100%!important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 
   /*---------------------------------
@@ -42,9 +42,9 @@
     right: 25px;
     bottom: 25px;
   }
-  
+
   #dummy {
-    margin-top: 10vw!important;
+    margin-top: 10vw !important;
   }
 
   /*---------------------------------
@@ -68,7 +68,7 @@
   }
 
   .rectangle :nth-child(2) {
-    font-size: 4vw!important;
+    font-size: 4vw !important;
   }
 
   /*---------------------------------
@@ -80,7 +80,7 @@
     -webkit-border-radius: 1.5vw;
     width: 50vw;
     display: block;
-    margin:auto;
+    margin: auto;
     margin-bottom: 4vw;
     margin-top: 2vw;
     display: none;
@@ -100,7 +100,7 @@
 
   .profile {
     padding-left: 13%;
-    padding-right: 0!important;
+    padding-right: 0 !important;
   }
 
   .profile div {
@@ -108,7 +108,7 @@
   }
 
   .name {
-    font-size: 5vw!important;
+    font-size: 5vw !important;
   }
 
   .name-jp {
@@ -116,7 +116,7 @@
   }
 
   .sns {
-    font-size: 6vw!important;
+    font-size: 6vw !important;
   }
 
   .qiita-logo {
@@ -129,7 +129,7 @@
 
   .stats {
     height: auto;
-    width: 100%!important;
+    width: 100% !important;
     margin-top: 3vw;
   }
 
@@ -150,7 +150,7 @@
   }
 
   .summary {
-    font-size: 3.5vw!important;
+    font-size: 3.5vw !important;
     margin-top: 1vw 0 2vw 0;
     display: block;
     margin-left: 9.5vw;
@@ -166,7 +166,7 @@
   }
 
   .career small {
-    font-size: 90%!important;
+    font-size: 90% !important;
   }
 
   .career a {
@@ -179,15 +179,16 @@
   }
 
   .career div div i {
-    font-size: 4.5vw!important;
+    font-size: 4.5vw !important;
   }
 
   .period {
-    font-size: 3.5vw!important;
+    font-size: 3.5vw !important;
   }
 
-  .career .summary a, .career .summary span {
-    font-size: 3.5vw!important;
+  .career .summary a,
+  .career .summary span {
+    font-size: 3.5vw !important;
   }
 
   .career .summary i {
@@ -212,15 +213,15 @@
   }
 
   .card-body {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .card-title {
-    font-size: 3vw!important;
+    font-size: 3vw !important;
   }
 
   .tags {
-    padding:0.5rem 1.25rem;
+    padding: 0.5rem 1.25rem;
   }
 
   .fa-tag {
@@ -228,7 +229,7 @@
   }
 
   .tag {
-    font-size: 2.5vw!important;
+    font-size: 2.5vw !important;
   }
 
   .modal-title {
@@ -244,7 +245,7 @@
   }
 
   .modal-body span {
-    font-size: 3vw!important;
+    font-size: 3vw !important;
   }
 
   /*---------------------------------
@@ -253,19 +254,26 @@
 
   ---------------------------------*/
 
-  #contact i, #contact span {
-    font-size: 4.8vw!important;
+  #contact i,
+  #contact span {
+    font-size: 4.8vw !important;
   }
 
   #contact .align-center {
     margin-top: 2vh;
   }
 
-  .mail-pc, .facebook-pc, .messenger-pc, .twitter-pc {
+  .mail-pc,
+  .facebook-pc,
+  .messenger-pc,
+  .twitter-pc {
     display: none;
   }
 
-  .mail-sp, .facebook-sp, .messenger-sp, .twitter-sp {
+  .mail-sp,
+  .facebook-sp,
+  .messenger-sp,
+  .twitter-sp {
     display: inline;
   }
 
@@ -279,12 +287,12 @@
 
   .share a {
     height: 7vw;
-    width:  20vw;
+    width: 20vw;
   }
 
   .share i {
-    line-height: 7vw!important;
-    font-size: 4vw!important;
+    line-height: 7vw !important;
+    font-size: 4vw !important;
   }
 
   .footer {
